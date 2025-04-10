@@ -18,7 +18,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'Hong Kong background story',
+        'topic': 'Cyberpunk',
         'character_amount': 5
         # 'topic': 'AI LLMs',
         # 'current_year': str(datetime.now().year)

@@ -1,21 +1,21 @@
 character_creation_task:
   description: >
-    Generate {character_amount} unique characters for the murder mystery, ensuring that each character is a suspect in the murder case.
+    Generate {character_amount} unique characters based on the topic "{topic}", ensuring that each character is a suspect in the murder case.
     Each character should have a detailed backstory, distinct personality traits, and a plausible motive for committing the murder.
   expected_output: >
-    A list of {character_amount} characters, each with a detailed backstory, unique personality traits, and a clear motive for being a suspect in the murder case.
+    A list of {character_amount} characters, each with a detailed backstory, unique personality traits, and a clear motive for being a suspect in the murder case, 
+    all aligned with the topic "{topic}".
   agent: casting_director
 
 murder_case_outline_task:
   description: >
-    Develop a murder mystery story involving {character_amount} suspects, each with a motive for killing the victim.
-    The story should include a concise and compelling outline that explains the relationship between each suspect and the victim, 
-    as well as how the true murderer committed the crime.
+    Develop a murder mystery story based on the topic "{topic}", involving {character_amount} suspects, each with a motive for killing the victim.
+    The story should include a concise and compelling outline that explains the relationship between each suspect and the victim. 
   expected_output: >
     A concise and compelling story outline that includes:
     1. The relationship between each suspect and the victim.
     2. The motive of each suspect.
-    3. A clear explanation of how the true murderer committed the crime.
+    3. How the story aligns with the topic "{topic}".
   agent: plot_weaver
 
 plot_weaving_task:
@@ -29,23 +29,23 @@ plot_weaving_task:
     3. A timeline of each suspect's activities on the day of the victim's death.
   agent: plot_weaver
 
-detail_enhancement_task:
-  description: >
-    Enhance the plot by adding vivid details, reliable suspenseful reasoning, and ensure every character has meaningful involvement in the story.
-  expected_output: >
-    A more detailed and engaging version of the input text, enriched with details.
-  agent: detail_enhancer
-
-# structured_story_task:
+# detail_enhancement_task:
 #   description: >
-#     Organize the text into a structured format: first, provide descriptions of all characters; 
-#     next, outline the overall story; finally, provide a detailed version of the story.
+#     Enhance the plot by adding vivid details, reliable suspenseful reasoning, and ensure every character has meaningful involvement in the story.
 #   expected_output: >
-#     A structured document containing: 
-#     1. Descriptions of all suspects, including their age, gender, relationship with the victim, and background story.
-#     2. A concise and compelling story outline.
-#     3. A detailed version of the story.
-#   agent: plot_weaver
+#     A more detailed and engaging version of the input text, enriched with details.
+#   agent: detail_enhancer
+
+structured_story_task:
+  description: >
+    Organize the text into a structured format: first, provide descriptions of all characters; 
+    next, outline the overall story; finally, provide a detailed version of the story.
+  expected_output: >
+    A structured document containing: 
+    1. Descriptions of all suspects, including their age, gender, relationship with the victim, and background story.
+    2. A concise and compelling story outline.
+    3. A detailed version of the story.
+  agent: plot_weaver
 
 # english_to_chinese_translation_task:
 #   description: >

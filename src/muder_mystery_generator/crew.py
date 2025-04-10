@@ -29,19 +29,19 @@ class MuderMysteryGenerator():
             verbose=True
         )
     
-    @agent
-    def detail_enhancer(self) -> Agent:
-        return Agent(
-            config=self.agents_config['detail_enhancer'],
-            verbose=True
-        )
+    # @agent
+    # def detail_enhancer(self) -> Agent:
+    #     return Agent(
+    #         config=self.agents_config['detail_enhancer'],
+    #         verbose=True
+    #     )
     
-    @agent
-    def english_to_chinese_translator(self) -> Agent:
-        return Agent(
-            config=self.agents_config['english_to_chinese_translator'],
-            verbose=True
-        )
+    # @agent
+    # def english_to_chinese_translator(self) -> Agent:
+    #     return Agent(
+    #         config=self.agents_config['english_to_chinese_translator'],
+    #         verbose=True
+    #     )
     
     @task
     def character_creation_task(self) -> Task:
@@ -61,19 +61,19 @@ class MuderMysteryGenerator():
             config=self.tasks_config['plot_weaving_task']
         )
     
-    @task
-    def detail_enhancement_task(self) -> Task:
-        return Task(
-            config=self.tasks_config['detail_enhancement_task'],
-            output_file='plot_en.md'
-        )
-    
     # @task
-    # def structured_story_task(self) -> Task:
+    # def detail_enhancement_task(self) -> Task:
     #     return Task(
-    #         config=self.tasks_config['structured_story_task'],
+    #         config=self.tasks_config['detail_enhancement_task'],
     #         output_file='plot_en.md'
     #     )
+    
+    @task
+    def structured_story_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['structured_story_task'],
+            output_file='plot_en.md'
+        )
     
     # @task
     # def english_to_chinese_translation_task(self) -> Task:

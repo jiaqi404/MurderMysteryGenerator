@@ -2,31 +2,39 @@ character_creation_task:
   description: >
     Generate {character_amount} unique characters based on the topic "{topic}", ensuring that each character is a suspect in the murder case.
     Each character should have a detailed backstory, distinct personality traits, and a plausible motive for committing the murder.
+    Ensure that none of the generated characters are detectives or similar roles.
   expected_output: >
     A list of {character_amount} characters, each with a detailed backstory, unique personality traits, and a clear motive for being a suspect in the murder case, 
-    all aligned with the topic "{topic}".
+    all aligned with the topic "{topic}". None of the characters should be detectives or similar roles.
   agent: casting_director
 
 murder_case_outline_task:
   description: >
     Develop a murder mystery story based on the topic "{topic}", involving {character_amount} suspects, each with a motive for killing the victim.
-    The story should include a concise and compelling outline that explains the relationship between each suspect and the victim. 
+    The story should be engaging, avoid using complex vocabulary, and feature relatively simple but intriguing twists.
+    Ensure that the true culprit is one of the {character_amount} suspects provided.
+    Include detailed information about the suspects, the crime scene, and the true culprit's method of committing the murder.
   expected_output: >
-    A concise and compelling story outline that includes:
-    1. The relationship between each suspect and the victim.
-    2. The motive of each suspect.
-    3. How the story aligns with the topic "{topic}".
+    A detailed and compelling story outline that includes:
+    1. The relationship between each suspect and the victim, their motives, and their background stories.
+    2. A description of the crime scene at the time of the victim's death, the victim's condition, and clues potentially linked to each suspect.
+    3. The identity of the true culprit, who must be one of the {character_amount} suspects, and a clear explanation of how they carried out the murder, 
+    ensuring the twists are simple yet captivating.
   agent: plot_weaver
 
 plot_weaving_task:
   description: >
-    Expand the story outline by creating a detailed background for the murder mystery, including the setting, relationships, and key events leading up to the murder.
-    Additionally, generate a timeline for each suspect's activities on the day of the victim's death.
+    Based on the input text, generate a more detailed and enriched story that includes:
+    1. The background story of the victim and each suspect, highlighting their relationships and interactions.
+    2. A detailed account of the events on the day of the victim's death, including how everyone gathered together and the circumstances leading to the victim's demise.
+    3. A timeline for each suspect's activities on the day of the murder, along with their possible methods of committing the crime.
+    4. A clear and detailed explanation of how the victim ultimately died.
   expected_output: >
-    A comprehensive story background with:
-    1. Detailed setting and relationships between characters.
-    2. Key events leading up to the murder.
-    3. A timeline of each suspect's activities on the day of the victim's death.
+    A richly detailed story that includes:
+    1. Comprehensive background stories for the victim and each suspect, emphasizing their relationships and motives.
+    2. A vivid narrative of the events leading up to the victim's death, including how and why everyone was present.
+    3. Detailed timelines for each suspect's actions on the day of the murder, along with plausible methods they could have used to commit the crime.
+    4. A clear and logical explanation of the victim's death, tying all elements together cohesively.
   agent: plot_weaver
 
 # detail_enhancement_task:
@@ -38,13 +46,21 @@ plot_weaving_task:
 
 structured_story_task:
   description: >
-    Organize the text into a structured format: first, provide descriptions of all characters; 
+    Organize the text into a structured format using Markdown: first, provide descriptions of all characters; 
     next, outline the overall story; finally, provide a detailed version of the story.
   expected_output: >
-    A structured document containing: 
-    1. Descriptions of all suspects, including their age, gender, relationship with the victim, and background story.
-    2. A concise and compelling story outline.
-    3. A detailed version of the story.
+    A structured document in Markdown format containing: 
+    ## Suspect Descriptions
+    - Descriptions of all suspects, including their age, gender, relationship with the victim, and background story.
+    
+    ## Story Outline
+    - A concise and compelling story outline.
+    
+    ## Suspect Timelines
+    - A timeline for each suspect's activities on the day of the murder, along with their possible methods of committing the crime.
+    
+    ## Culprit Details
+    - The identity of the true culprit, with a clear explanation of their motive and method of committing the murder.
   agent: plot_weaver
 
 # english_to_chinese_translation_task:

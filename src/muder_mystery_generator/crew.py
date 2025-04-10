@@ -52,13 +52,13 @@ class MuderMysteryGenerator():
     @task
     def murder_case_outline_task(self) -> Task:
         return Task(
-            config=self.tasks_config['murder_case_outline_task']
+            config=self.tasks_config['murder_case_outline_task'],
         )
     
     @task
     def plot_weaving_task(self) -> Task:
         return Task(
-            config=self.tasks_config['plot_weaving_task']
+            config=self.tasks_config['plot_weaving_task'],
         )
     
     # @task

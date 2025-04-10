@@ -50,6 +50,12 @@ class MuderMysteryGenerator():
         )
     
     @task
+    def murder_case_outline_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['murder_case_outline_task']
+        )
+    
+    @task
     def plot_weaving_task(self) -> Task:
         return Task(
             config=self.tasks_config['plot_weaving_task']
@@ -58,22 +64,23 @@ class MuderMysteryGenerator():
     @task
     def detail_enhancement_task(self) -> Task:
         return Task(
-            config=self.tasks_config['detail_enhancement_task']
-        )
-    
-    @task
-    def structured_story_task(self) -> Task:
-        return Task(
-            config=self.tasks_config['structured_story_task'],
+            config=self.tasks_config['detail_enhancement_task'],
             output_file='plot_en.md'
         )
     
-    @task
-    def english_to_chinese_translation_task(self) -> Task:
-        return Task(
-            config=self.tasks_config['english_to_chinese_translation_task'],
-            output_file='plot_cn.md'
-        )
+    # @task
+    # def structured_story_task(self) -> Task:
+    #     return Task(
+    #         config=self.tasks_config['structured_story_task'],
+    #         output_file='plot_en.md'
+    #     )
+    
+    # @task
+    # def english_to_chinese_translation_task(self) -> Task:
+    #     return Task(
+    #         config=self.tasks_config['english_to_chinese_translation_task'],
+    #         output_file='plot_cn.md'
+    #     )
 
     @crew
     def crew(self) -> Crew:

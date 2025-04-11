@@ -53,13 +53,14 @@ class MuderMysteryGenerator():
     def murder_case_outline_task(self) -> Task:
         return Task(
             config=self.tasks_config['murder_case_outline_task'],
+            output_file='plot_en.md'
         )
     
-    @task
-    def plot_weaving_task(self) -> Task:
-        return Task(
-            config=self.tasks_config['plot_weaving_task'],
-        )
+    # @task
+    # def plot_weaving_task(self) -> Task:
+    #     return Task(
+    #         config=self.tasks_config['plot_weaving_task'],
+    #     )
     
     # @task
     # def detail_enhancement_task(self) -> Task:
@@ -68,12 +69,12 @@ class MuderMysteryGenerator():
     #         output_file='plot_en.md'
     #     )
     
-    @task
-    def structured_story_task(self) -> Task:
-        return Task(
-            config=self.tasks_config['structured_story_task'],
-            output_file='plot_en.md'
-        )
+    # @task
+    # def structured_story_task(self) -> Task:
+    #     return Task(
+    #         config=self.tasks_config['structured_story_task'],
+    #         output_file='plot_en.md'
+    #     )
     
     # @task
     # def english_to_chinese_translation_task(self) -> Task:

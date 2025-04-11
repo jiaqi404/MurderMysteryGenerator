@@ -16,6 +16,13 @@ class MuderMysteryGenerator():
     tasks_config = 'config/tasks.yaml'
 
     @agent
+    def crime_scene_investigator(self) -> Agent:
+        return Agent(
+            config=self.agents_config['crime_scene_investigator'],
+            verbose=True
+        )
+
+    @agent
     def casting_director(self) -> Agent:
         return Agent(
             config=self.agents_config['casting_director'],
@@ -42,7 +49,12 @@ class MuderMysteryGenerator():
     #         config=self.agents_config['english_to_chinese_translator'],
     #         verbose=True
     #     )
-    
+    @task
+    def detailed_crime_scene_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['detailed_crime_scene_task'],
+        )
+
     @task
     def character_creation_task(self) -> Task:
         return Task(

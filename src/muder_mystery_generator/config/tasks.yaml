@@ -1,13 +1,38 @@
+detailed_crime_scene_task:
+  description: >
+    Generate a detailed description of the crime scene for a murder mystery. 
+    Include the following details: the victim's identity (name, age, occupation, and background), the time of death, the location of the crime, 
+    the condition of the body when found, any evidence present at the scene, and the initial observations of the surroundings. 
+    Ensure the description is vivid and sets the tone for the mystery.
+  expected_output: >
+    A detailed crime scene description in Markdown format:
+    ## Victim Details
+    - Name:
+    - Age:
+    - Occupation:
+    - Background:
+    ## Time of Death
+    ## Location
+    ## Body Condition
+    ## Evidence Found
+    ## Surroundings
+  agent: crime_scene_investigator
+
 character_creation_task:
   description: >
     Create {character_amount} unique characters set in the context of "{topic}" during the year {year}. 
     Each character should be a suspect in the murder case, with a detailed profile, backstory, distinct personality traits, and a plausible motive for the crime. 
     Ensure that none of the characters take on roles such as detectives or investigators.
   expected_output: >
-    A list of {character_amount} characters in Markdown format:
-    ## Suspect 1
-    ## Suspect 2
-    etc.
+    A detailed list of {character_amount} characters in Markdown format, with the following structure for each suspect:
+    ## Suspect
+    - **Name**: 
+    - **Age**: 
+    - **Gender**: 
+    - **Occupation**: 
+    - **Background**: 
+    - **Relationship with the Victim**: 
+    - **Motive for the Crime**: 
   agent: casting_director
 
 murder_case_outline_task:
@@ -26,16 +51,16 @@ murder_case_outline_task:
     ## True Culprit
   agent: plot_weaver
 
-plot_weaving_task:
-  description: >
-    Based on the input text, generate a more detailed and enriched story that includes:
-    1. The background story of the victim and each suspect, highlighting their relationships and interactions.
-    2. A detailed account of the events on the day of the victim's death, including how everyone gathered together and the circumstances leading to the victim's demise.
-    3. A timeline for each suspect's activities on the day of the murder, along with their possible methods of committing the crime.
-    4. A clear and detailed explanation of how the victim ultimately died.
-  expected_output: >
-    A richly detailed story
-  agent: plot_weaver
+# plot_weaving_task:
+#   description: >
+#     Based on the input text, generate a more detailed and enriched story that includes:
+#     1. The background story of the victim and each suspect, highlighting their relationships and interactions.
+#     2. A detailed account of the events on the day of the victim's death, including how everyone gathered together and the circumstances leading to the victim's demise.
+#     3. A timeline for each suspect's activities on the day of the murder, along with their possible methods of committing the crime.
+#     4. A clear and detailed explanation of how the victim ultimately died.
+#   expected_output: >
+#     A richly detailed story
+#   agent: plot_weaver
 
 # detail_enhancement_task:
 #   description: >
@@ -44,24 +69,24 @@ plot_weaving_task:
 #     A more detailed and engaging version of the input text, enriched with details.
 #   agent: detail_enhancer
 
-structured_story_task:
-  description: >
-    Organize the text into a structured format using Markdown: first, outline the overall story; Next, provide descriptions of all characters; 
-    finally, provide a detailed version of the story.
-  expected_output: >
-    A structured document in Markdown format containing: 
-    ## Story Outline
-    - A concise and compelling story outline. Include the time, location, crime scene and the identification of the victim. 
+# structured_story_task:
+#   description: >
+#     Organize the text into a structured format using Markdown: first, outline the overall story; Next, provide descriptions of all characters; 
+#     finally, provide a detailed version of the story.
+#   expected_output: >
+#     A structured document in Markdown format containing: 
+#     ## Story Outline
+#     - A concise and compelling story outline. Include the time, location, crime scene and the identification of the victim. 
 
-    ## Suspect Descriptions
-    - Descriptions of all suspects, including their age, gender, relationship with the victim, and background story.
+#     ## Suspect Descriptions
+#     - Descriptions of all suspects, including their age, gender, relationship with the victim, and background story.
     
-    ## Suspect Timelines
-    - A timeline for each suspect's activities on the day of the murder, along with their possible methods of committing the crime.
+#     ## Suspect Timelines
+#     - A timeline for each suspect's activities on the day of the murder, along with their possible methods of committing the crime.
     
-    ## Culprit Details
-    - The identity of the true culprit, with a clear explanation of their motive and method of committing the murder.
-  agent: plot_weaver
+#     ## Culprit Details
+#     - The identity of the true culprit, with a clear explanation of their motive and method of committing the murder.
+#   agent: plot_weaver
 
 # english_to_chinese_translation_task:
 #   description: >

@@ -1,6 +1,6 @@
 detailed_crime_scene_task:
   description: >
-    Generate a detailed description of the crime scene for a murder mystery. 
+    Generate a detailed description of the crime scene for a murder mystery set in the context of "{topic}" during the year {year}. 
     Include the following details: the victim's identity (name, age, occupation, and background), the time of death, the location of the crime, 
     the condition of the body when found, any evidence present at the scene, and the initial observations of the surroundings. 
     Ensure the description is vivid and sets the tone for the mystery.
@@ -44,9 +44,6 @@ murder_case_outline_task:
     Include detailed information about the victim's identity, the crime scene, the suspects, and how the true culprit committed the murder.
   expected_output: >
     ## Crime Scene
-    * Location
-    * Time
-    * Body Found
     ## Suspect Profiles
     ## True Culprit
   agent: plot_weaver

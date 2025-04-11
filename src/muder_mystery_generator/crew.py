@@ -53,19 +53,21 @@ class MuderMysteryGenerator():
     def detailed_crime_scene_task(self) -> Task:
         return Task(
             config=self.tasks_config['detailed_crime_scene_task'],
+            output_file='crime_scene.md'
         )
 
     @task
     def character_creation_task(self) -> Task:
         return Task(
             config=self.tasks_config['character_creation_task'],
+            output_file='characters.md'
         )
     
     @task
     def murder_case_outline_task(self) -> Task:
         return Task(
             config=self.tasks_config['murder_case_outline_task'],
-            output_file='plot_en.md'
+            output_file='murder_case_outline.md'
         )
     
     # @task

@@ -1,29 +1,23 @@
-## Victim Details
-- **Name:** Elara Vex
-- **Age:** 32
-- **Occupation:** Formerly a skilled "Memory Hunter" for Ono-Sendai Corporation, specializing in extracting and retrieving sensitive information from corporate databases.
-- **Background:** Born into a lower-middle-class family on the sprawling metropolis of Neo-Tokyo. Elara's early life was marked by hardship and struggle, but her exceptional cognitive abilities and natural talent for hacking eventually earned her a coveted position with Ono-Sendai Corporation.
+## Victim Details 
+- Name:  **Mayra Elwes**
+- Age: 32
+- Occupation: Lead hacker at Omicron Innovations
+- Background: Mayra was a brilliant hacker who had worked for several high-profile clients in the shadows of the corporate world. Her skills were highly sought after, and she was known to be fiercely independent.
 
-## Time of Death
-The estimated time of death is between 02:47 AM and 03:15 AM, Pacific Standard Time (PST), based on the decomposition rate of the body and the presence of certain biochemical markers in the environment.
+## Time of Death 
+The body was discovered at approximately 03:45 AM on February 15th, 2077.
 
-## Location
-The crime scene is situated within a nondescript, high-rise corporate office building located in the downtown area of Neo-Tokyo. The exact address is:
-**2021-01 CyberCorp Plaza, Neo-Tokyo, Japan**
-The building's interior design and layout are typical of modern corporate architecture, with sleek, minimalist aesthetics and an abundance of advanced security features.
+## Location 
+The crime scene is located in a seedy part of the sprawling metropolis, within the limits of the sprawling sprawl that is Night City. The location is in an abandoned warehouse on 14th and Main Street, a dilapidated building with boarded-up windows and a crooked sign creaking in the wind.
 
-## Body Condition
-Upon arrival at the crime scene, I observed that Elara Vex's body was found in a seated position, slumped over a worn, leather-bound chair. Her attire consisted of a black, high-collared jacket with metallic accents, along with a pair of durable, knee-high boots and a sleek, silver necklace featuring an Ono-Sendai insignia. The victim displayed signs of severe blunt force trauma to the head and torso, indicating a violent and likely fatal assault. A small, crescent-shaped wound was visible on her left cheekbone, suggesting that the perpetrator may have used a custom-made, high-tech device to inflict this injury.
+## Body Condition 
+Mayra's body was discovered in a contorted position near a damaged server terminal. Her eyes were wide open, staring blankly into space. The skin around her eyes had begun to discolor, giving an impression of extreme emotional distress at the moment of death. Her hair was disheveled, and she showed signs of having been restrained at some point.
 
-## Evidence Found
-- A 9mm pistol with an Ono-Sendai Corporation logo engraved onto the slide was discovered on the floor nearby.
-- A small, metallic data pad containing encrypted files and cryptic messages was found near Elara's hand.
-- Several strands of synthetic fibers, likely from a bespoke suit, were caught in the victim's fingernails.
-- A set of biometric lockpicks, engraved with Ono-Sendai's corporate emblem, lay scattered on the nearby work surface.
+## Evidence Found 
+- A torn piece of fabric caught in the lock of a nearby air vent.
+- Several scattered wires from an abandoned cyberdeck on the floor.
+- The remains of a partially consumed cup of coffee on a dusty workbench.
+- Bloodstains on the terminal's keyboard and surrounding equipment, indicating that Mayra had been typing when she was killed.
 
-## Surroundings
-The immediate area surrounding Elara Vex's body displayed signs of disarray and hasty departure. Her chair was overturned, casting a faint shadow on the polished floor. A nearby console, presumably connected to the building's internal security system, showed signs of forced shutdown or tampering. The room's advanced surveillance equipment had been disabled, while the fire suppression system remained operational but dormant. I observed that the windows were sealed from within, suggesting that the perpetrator may have used an internal pressure valve or a custom-made sealant to prevent escape.
-
-In the nearby corridor, I found faint signs of scuff marks on the floor, potentially leading away from the crime scene. A security camera's lens was cracked, but not shattered, and several fibers from Elara's suit matched those discovered near the victim's body, indicating possible follow-up or pursuit by the perpetrator.
-
-This concludes my preliminary analysis of the crime scene. Further investigation is necessary to unravel the complex threads of evidence and reconstruct the events leading up to Elara Vex's tragic demise.
+## Surroundings 
+The warehouse is dimly lit by flickering fluorescent lights overhead. The air is thick with dust, and there are signs of recent scavenging, including scattered junk and discarded computer parts. A broken door leads out into the night, while a narrow staircase ascends to a dimly lit mezzanine level.

@@ -4,7 +4,11 @@ import warnings
 
 from datetime import datetime
 
-from muder_mystery_generator.crew import MuderMysteryGenerator
+from murder_mystery_generator.crew import MurderMysteryGenerator
+from murder_mystery_generator.character import Character
+
+import yaml
+from pathlib import Path
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
@@ -13,19 +17,27 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 # Replace with inputs you want to test with, it will automatically
 # interpolate any tasks and agents information
 
+
+characters_path = Path(__file__).parent / "characters"
+characters = []
+for file in characters_path.rglob("*.yaml"):
+    with open(file) as f:
+        characters.append(Character(**yaml.safe_load(f)))
+
 def run():
     """
     Run the crew.
     """
     inputs = {
+        "characters": "\n".join([character.description for character in characters]),
         'topic': 'Cyberpunk',
-        'character_amount': 5,
-        'year': 2077
+        'year': 2077,
+        'character_amount': len(characters),
         # 'year': str(datetime.now().year)
     }
     
     try:
-        MuderMysteryGenerator().crew().kickoff(inputs=inputs)
+        MurderMysteryGenerator().crew().kickoff(inputs=inputs)
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
 
@@ -38,7 +50,7 @@ def run():
 #         "topic": "AI LLMs"
 #     }
 #     try:
-#         MuderMysteryGenerator().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
+#         MurderMysteryGenerator().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
 
 #     except Exception as e:
 #         raise Exception(f"An error occurred while training the crew: {e}")
@@ -48,7 +60,7 @@ def run():
 #     Replay the crew execution from a specific task.
 #     """
 #     try:
-#         MuderMysteryGenerator().crew().replay(task_id=sys.argv[1])
+#         MurderMysteryGenerator().crew().replay(task_id=sys.argv[1])
 
 #     except Exception as e:
 #         raise Exception(f"An error occurred while replaying the crew: {e}")
@@ -62,7 +74,7 @@ def run():
 #         "current_year": str(datetime.now().year)
 #     }
 #     try:
-#         MuderMysteryGenerator().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
+#         MurderMysteryGenerator().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
 
 #     except Exception as e:
 #         raise Exception(f"An error occurred while testing the crew: {e}")

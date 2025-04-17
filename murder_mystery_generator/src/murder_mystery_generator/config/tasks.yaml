@@ -18,13 +18,13 @@ detailed_crime_scene_task:
     ## Surroundings
   agent: crime_scene_investigator
 
-character_creation_task:
+character_modification_task:
   description: >
-    Create {character_amount} unique characters set in the context of "{topic}" during the year {year}. 
-    Each character should be a suspect in the murder case, with a detailed profile, backstory, distinct personality traits, and a plausible motive for the crime. 
+    Modify the given characters({characters}) to make them suspects in a murder case set in the context of "{topic}" during the year {year}. 
+    Each character should have a detailed profile, backstory, distinct personality traits, and a plausible motive for the crime. 
     Ensure that none of the characters take on roles such as detectives or investigators.
   expected_output: >
-    A detailed list of {character_amount} characters in Markdown format, with the following structure for each suspect:
+    A detailed list of modified characters in Markdown format, with the following structure for each suspect:
     ## Suspect
     - **Name**: 
     - **Age**: 

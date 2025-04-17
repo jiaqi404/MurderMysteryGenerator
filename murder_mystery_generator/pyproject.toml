@@ -1,0 +1,23 @@
+[project]
+name = "murder_mystery_generator"
+version = "0.1.0"
+description = "murder_mystery_generator using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.114.0,<1.0.0"
+]
+
+[project.scripts]
+murder_mystery_generator = "murder_mystery_generator.main:run"
+run_crew = "murder_mystery_generator.main:run"
+train = "murder_mystery_generator.main:train"
+replay = "murder_mystery_generator.main:replay"
+test = "murder_mystery_generator.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

@@ -6,8 +6,7 @@ from crewai.project import CrewBase, agent, crew, task
 # https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
 
 @CrewBase
-class MuderMysteryGenerator():
-    """MuderMysteryGenerator crew"""
+class MurderMysteryGenerator():
 
     # Learn more about YAML configuration files here:
     # Agents: https://docs.crewai.com/concepts/agents#yaml-configuration-recommended
@@ -57,9 +56,9 @@ class MuderMysteryGenerator():
         )
 
     @task
-    def character_creation_task(self) -> Task:
+    def character_modification_task(self) -> Task:
         return Task(
-            config=self.tasks_config['character_creation_task'],
+            config=self.tasks_config['character_modification_task'],
             output_file='characters.md'
         )
     
@@ -99,10 +98,6 @@ class MuderMysteryGenerator():
 
     @crew
     def crew(self) -> Crew:
-        """Creates the MuderMysteryGenerator crew"""
-        # To learn how to add knowledge sources to your crew, check out the documentation:
-        # https://docs.crewai.com/concepts/knowledge#what-is-knowledge
-
         return Crew(
             agents=self.agents, # Automatically created by the @agent decorator
             tasks=self.tasks, # Automatically created by the @task decorator

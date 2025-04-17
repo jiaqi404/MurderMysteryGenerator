@@ -375,50 +375,6 @@
       "widgets_values": []
     },
     {
-      "id": 70,
-      "type": "ImageScale",
-      "pos": [
-        3748.40576171875,
-        -341.3687438964844
-      ],
-      "size": [
-        315,
-        130
-      ],
-      "flags": {},
-      "order": 34,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 118
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            98,
-            111,
-            115
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.27",
-        "Node name for S&R": "ImageScale"
-      },
-      "widgets_values": [
-        "nearest-exact",
-        1024,
-        1600,
-        "disabled"
-      ]
-    },
-    {
       "id": 72,
       "type": "CLIPTextEncode",
       "pos": [
@@ -668,7 +624,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        122900615549158,
+        593500362439856,
         "randomize",
         10,
         6,
@@ -988,42 +944,6 @@
         "Node name for S&R": "VAEDecode"
       },
       "widgets_values": []
-    },
-    {
-      "id": 44,
-      "type": "EmptyLatentImage",
-      "pos": [
-        -1803.0972900390625,
-        874.77783203125
-      ],
-      "size": [
-        315,
-        106
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "slot_index": 0,
-          "links": [
-            52
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.27",
-        "Node name for S&R": "EmptyLatentImage"
-      },
-      "widgets_values": [
-        1024,
-        1600,
-        1
-      ]
     },
     {
       "id": 37,
@@ -1837,7 +1757,7 @@
         467.1582946777344
       ],
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1861,6 +1781,86 @@
         "1.png",
         "image",
         ""
+      ]
+    },
+    {
+      "id": 44,
+      "type": "EmptyLatentImage",
+      "pos": [
+        -1803.0972900390625,
+        874.77783203125
+      ],
+      "size": [
+        315,
+        106
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "slot_index": 0,
+          "links": [
+            52
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        768,
+        1024,
+        1
+      ]
+    },
+    {
+      "id": 70,
+      "type": "ImageScale",
+      "pos": [
+        3748.40576171875,
+        -341.3687438964844
+      ],
+      "size": [
+        315,
+        130
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 118
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            98,
+            111,
+            115
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.27",
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        768,
+        1024,
+        "disabled"
       ]
     }
   ],
@@ -2419,10 +2419,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.9194342495775223,
+      "scale": 0.41772481694159486,
       "offset": [
-        2503.5986871413984,
-        -171.55413306123592
+        4206.992414021997,
+        1968.8866780068672
       ]
     }
   },

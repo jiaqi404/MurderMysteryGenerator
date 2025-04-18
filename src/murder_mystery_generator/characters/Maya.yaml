@@ -1,0 +1,19 @@
+name: Maya
+age: 22
+personality: >
+  Outwardly: Competent, Detached
+  Inwardly: Yearning, Insecure
+  Core: Empathetic but Detached
+appearance: >
+  Hair: Silver, Neatly Styled
+  Eyes: Grey, Analytical
+  Clothing: Tailored Robes, Muted Tones
+  Notable Feature: Shadowy Quality
+backstory: |
+  Maya works in the Lunar Library, a secluded and serene place dedicated to the study of Echo Bonds. 
+  She spends her days immersed in ancient scrolls and manuscripts, uncovering hidden knowledge. 
+  Despite her dedication, she feels a persistent emptiness and a longing for connection. 
+  Maya has never encountered a phantom friend, but her curiosity about them drives her research. 
+  Her ultimate goal is to understand herself and resolve the shadows of her past.
+lora_label: 8432g
+

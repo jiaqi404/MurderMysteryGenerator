@@ -33,21 +33,21 @@ class MurderMysteryGenerator():
     def detailed_crime_scene_task(self) -> Task:
         return Task(
             config=self.tasks_config['detailed_crime_scene_task'],
-            output_file='crime_scene.md'
+            output_file='outputs/crime_scene.md'
         )
 
     @task
     def character_modification_task(self) -> Task:
         return Task(
             config=self.tasks_config['character_modification_task'],
-            output_file='characters.md'
+            output_file='outputs/characters.md'
         )
     
     @task
     def murder_case_outline_task(self) -> Task:
         return Task(
             config=self.tasks_config['murder_case_outline_task'],
-            output_file='murder_case_outline.md'
+            output_file='outputs/murder_case_outline.md'
         )
     
     # ------------------ Create crew using agents & tasks ------------------

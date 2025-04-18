@@ -4,7 +4,7 @@ import io
 import base64
 import yaml
 
-character_choices = ["Jeff", "Nakasuna", "Maya", "Elvin"]
+character_choices = ["Jeff", "Hiroharu Nakasuna", "Maya", "Elvin"]
 
 # Dummy function to generate an image from text
 def text_to_image(text):
@@ -35,20 +35,16 @@ with gr.Blocks() as demo:
     gr.Markdown("""
         # MurderMysteryGenerator
 
-        **SketchModeling** is a method for 3D mesh generation from a sketch.
-
-        It has three steps:
-        1. It generates image from sketch using Stable Diffusion and ControlNet.
-        2. It removes the background of the image using RMBG.
-        3. It reconsturcted the 3D model of the image using InstantMesh.
-
-        On below, you can either upload a sketch image or draw the sketch yourself. Then press Run and wait for the model to be generated.
+        **MurderMysteryGenerator** uses AI to generate murder mystery stories and characters. 
+                
+        It is a tool for writers, game developers, and anyone who wants to create engaging narratives.
         """)
     with gr.Tab("Tool"):
         with gr.Row():
             with gr.Column(variant="panel"):
                 with gr.Row():
                     with gr.Column():
+                        gr.Markdown("### Characters")
                         upload_yaml = gr.File(
                             label="Upload YAML File", file_types=[".yaml"]
                         )
@@ -73,45 +69,49 @@ with gr.Blocks() as demo:
                         #     outputs=selected_characters
                         # )
                     with gr.Column():
-                        with gr.Tab("Character Settings"):
-                            generated_img = gr.Image(
-                                type="pil", label="Gnerated Image", image_mode="RGBA", interactive=False
-                            )
-                        with gr.Tab("Story Settings"):
-                            processed_img = gr.Image(
-                                type="pil", label="Processed Image", image_mode="RGBA", interactive=False
-                            )
-                # with gr.Row():
-                #     prompt = gr.Textbox(label="Pompt", interactive=True)
-                #     controlnet_conditioning_scale = gr.Slider(
-                #         label="Controlnet Conditioning Scale",
-                #         minimum=0.5,
-                #         maximum=1.5,
-                #         value=0.85,
-                #         step=0.05,
-                #         interactive=True
-                #     )
-                # with gr.Accordion('Advanced options', open=False):
-                #     with gr.Row():
-                #         negative_prompt = gr.Textbox(label="Negative Prompt", value="low quality, black and white image", interactive=True)
-                #         add_prompt = gr.Textbox(label="Styles", value=", 3d rendered, shadeless, white background, intact and single object", interactive=True)
-                #         num_inference_steps = gr.Number(label="Inference Steps", value=50, interactive=True)
+                        with gr.Row():
+                            with gr.Column():
+                                gr.Markdown("### Story Settings")
+                                topic = gr.Textbox(label="Topic", interactive=True)
+                                year = gr.Number(label="Year", value=2025, interactive=True)
+                        with gr.Row():
+                            with gr.Column():
+                                gr.Markdown("### Character Generation Settings")
+                                card_bg = gr.Textbox(label="Background of Character Image", interactive=True, lines=2)
+                                with gr.Accordion('Style Combination', open=True):
+                                    with gr.Row():
+                                        weight_style = gr.Slider(
+                                            label="Weight Style",
+                                            minimum=1,
+                                            maximum=2,
+                                            value=1.5,
+                                            step=0.05,
+                                            interactive=True
+                                        )
+                                        weight_composition = gr.Slider(
+                                            label="Weight Compostion",
+                                            minimum=0.5,
+                                            maximum=1,
+                                            value=0.75,
+                                            step=0.05,
+                                            interactive=True
+                                        )
+                                        start_at = gr.Number(
+                                            label="Start At", value=0, interactive=True
+                                        )
+                                        end_at = gr.Number(
+                                            label="End At", value=1, interactive=True
+                                        )
+                                        embeds_scaling = gr.Textbox(
+                                            label="Embeds Scaling", value="K+V", interactive=True
+                                        )
+                
                 run_btn = gr.Button("Run", variant="primary")
 
             with gr.Column():
-                with gr.Row():
-                    with gr.Column():
-                        sketch_img = gr.Image(
-                                type="pil", label="Upload Image", sources="upload", image_mode="RGBA"
-                            )
-                        # with gr.Tab("Input Image", visible=False):
-                        #     input_img = gr.Image(
-                        #         type="pil", image_mode="RGBA", interactive=False, visible=False
-                        #     )
-                    with gr.Column():
-                        sketch_img = gr.Image(
-                                type="pil", label="Upload Image", sources="upload", image_mode="RGBA"
-                            )
+                gallery = gr.Gallery(label="Generated Cards", show_label=True, elem_id="gallery", columns=[4], object_fit="contain", height="auto")
+                output_script = gr.Textbox(label="Output Script", interactive=False, lines=10)
+    
     with gr.Tab("Game"):
         text_input = gr.Textbox(label="Enter your text", placeholder="Type something...")
         image_output = gr.Image(label="Generated Image")

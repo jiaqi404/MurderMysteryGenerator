@@ -20,7 +20,7 @@ def add_yaml_characters(file, character_options):
     else:
         return character_options
 
-# Gradio interface
+# ------------------ Gradio interface ------------------
 with gr.Blocks() as demo:
     gr.Markdown("""
         # MurderMysteryGenerator

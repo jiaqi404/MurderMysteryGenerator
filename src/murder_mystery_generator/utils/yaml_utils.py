@@ -20,28 +20,25 @@ def get_yaml_name(file):
         data = yaml.safe_load(f)
     return data.get('name')
 
-def get_all_characters(characters_path):
-    characters = []
-    for file in Path(characters_path).rglob("*.yaml"):
-        with open(file) as f:
-            characters.append(f)
-    return characters
+def get_all_characters_path(characters_root_path):
+    characters_path = []
+    for file in Path(characters_root_path).rglob("*.yaml"):
+        characters_path.append(file)
+    return characters_path
 
-def get_selected_characters(character_names, characters_path):
-    character_yaml_files = get_all_characters(characters_path)
-    selected_yaml_files = []
+def get_selected_characters_path(character_names, characters_root_path):
+    characters_path = get_all_characters_path(characters_root_path)
+    selected_path = []
     for character_name in character_names:
-        for character_yaml_file in character_yaml_files:
-            if get_yaml_name(character_yaml_file) == character_name:
-                selected_yaml_files.append(character_yaml_file)
-    
-    return selected_yaml_files
+        for character_path in characters_path:
+            with open(character_path, 'r') as f:
+                if get_yaml_name(f) == character_name:
+                    selected_path.append(character_path)
+    return selected_path
 
-def format_characters(character_yaml_files):
+def format_characters(characters_path):
     characters = []
-    for character_yaml_file in character_yaml_files:
-        print(yaml.safe_load(character_yaml_file))
-        characters.append(Character(**yaml.safe_load(character_yaml_file)))
+    for character_path in characters_path:
+        with open(character_path) as f:
+            characters.append(Character(**yaml.safe_load(f)))
     return characters
-
-# format_characters(get_selected_characters(['Lyra', 'Elvin'], "C:\\Users\\sdit\\Documents\\GitHub\\murder_mystery_generator\\src\\murder_mystery_generator\\characters"))

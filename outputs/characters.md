@@ -1,43 +1,50 @@
-### Suspects
+## Suspects
+### Lu Wu (aka Wojin)
+#### - Age: 15
+#### - Gender: Male
+#### - Occupation: Military Recruit
+#### - Background: Born into a military family, Lu Wu was raised with the expectation of greatness. However, he struggled to live up to his family's standards, leading to feelings of inadequacy and low self-esteem. He found solace in proving himself through rigorous training and combat.
+#### - Relationship with the Victim: Lu Wu had known Lord Worthington since childhood, as they both attended the same military academy. However, their relationship was strained due to Worthington's condescending attitude towards Lu Wu.
+#### - Motive for the Crime: Lu Wu had a long-standing grudge against Lord Worthington, who he believed had sabotaged his chances of becoming a great warrior. The opportunity to kill Worthington presented itself when Lu Wu discovered him alone in the grand ballroom.
 
-#### Suspect - Thomas Brown
-- **Age**: 40
-- **Gender**: Male
-- **Occupation**: Trade Unionist and Organizer
-- **Background**: Born in a blue-collar town, Thomas became a trade unionist at a young age, fighting for better wages and safer working conditions. He had a personal connection to the university as he was involved in organizing unions across different cities.
-- **Relationship with the Victim**: Although there is no direct connection between Thomas and Dr. Wong, his work as a union organizer might have put him in contact with her or other university staff members who were part of labor disputes.
-- **Motive for the Crime**: Thomas had been involved in several high-profile strikes at universities across Hong Kong, often clashing with management and university administrators. He might have seen Dr. Wong's work on AI and machine learning as a threat to his own cause or as a means to further exploit workers' rights, leading him to silence her permanently.
+### Lyra
+#### - Age: 25
+#### - Gender: Female
+#### - Occupation: Adventurer and Cartographer
+#### - Background: Lyra was born into a family of nomadic explorers and developed exceptional skills in navigation, botany, and deciphering ancient symbols. She became a renowned adventurer, but her parents' disappearance on an expedition left her with a sense of abandonment.
+#### - Relationship with the Victim: Lyra had met Lord Worthington at a social gathering, where he was known for his arrogance and condescending behavior towards women. However, she saw beyond his facade and recognized the vulnerability behind his mask.
+#### - Motive for the Crime: Lyra had discovered that Lord Worthington was involved in a plot to exploit the natural resources of the surrounding forests, which would have devastating effects on the local ecosystem. She decided to take matters into her own hands and kill him to protect the land and its inhabitants.
 
-#### Suspect - Lyra
-- **Age**: 25
-- **Gender**: Female
-- **Occupation**: Adventurer and Explorer
-- **Background**: Born into a family of nomadic explorers, Lyra was raised on the open road. She had a reputation as one of the most fearless and resourceful explorers in the realm.
-- **Relationship with the Victim**: Although there is no direct connection between Lyra and Dr. Wong, both were part of the Hong Kong University community, either through coursework or social events. Lyra's free-spirited nature might have led her to cross paths with Dr. Wong on multiple occasions.
-- **Motive for the Crime**: Lyra's adventurous nature often led her to take risks and challenge authority. She might have seen Dr. Wong's work as a threat to her own freedom or as something that could limit her access to certain resources or information.
+### Jeff
+#### - Age: 17
+#### - Gender: Male
+#### - Occupation: Student
+#### - Background: Jeff transferred to a traditional middle school in Hong Kong, where he struggled to adjust to the new environment. He had heard rumors of supernatural events occurring within the school walls, which sparked his curiosity.
+#### - Relationship with the Victim: Jeff had never met Lord Worthington, but he had heard stories about the duke's ruthlessness and willingness to do whatever it took to achieve power.
+#### - Motive for the Crime: Jeff discovered a dark secret about Lord Worthington's past, one that could ruin his reputation and destroy his family's legacy. He decided to use this information to exact revenge on the duke.
 
-#### Suspect - Jeff
-- **Age**: 17
-- **Gender**: Male
-- **Occupation**: High School Student
-- **Background**: A transfer student from the Chinese mainland, Jeff had returned to Hong Kong to study. He was part of a complex family history with ties to supernatural events at the university.
-- **Relationship with the Victim**: Although there is no direct connection between Jeff and Dr. Wong, his family's past involvement in supernatural events might have put him in a position where he needed to protect himself or others from her work.
-- **Motive for the Crime**: Jeff's family history was deeply connected to the university's supernatural events. He might have seen Dr. Wong's research as a threat to his own safety or that of his loved ones, leading him to silence her.
+### Hiroharu Nakasuna
+#### - Age: 24
+#### - Gender: Female
+#### - Occupation: Demon Hunter
+#### - Background: Hiroharu was raised by her mother after her father's death, and she developed a strong sense of justice. She became a demon hunter to protect the innocent and combat supernatural threats.
+#### - Relationship with the Victim: Hiroharu had encountered Lord Worthington on several occasions, as they both worked to eliminate demons that threatened the kingdom. However, she saw beyond his façade and recognized the complexity of his character.
+#### - Motive for the Crime: Hiroharu discovered that Lord Worthington was secretly working with a group of rogue demon hunters who sought to use demonic powers for their own gain. She decided to kill him to stop this plot and protect the kingdom.
 
-#### Suspect - Maya
-- **Age**: 22
-- **Gender**: Female
-- **Occupation**: Researcher at the Lunar Library
-- **Background**: Maya worked in the Lunar Library, studying Echo Bonds and searching for answers about phantom friends. She had a personal connection to Dr. Wong through her research.
-- **Relationship with the Victim**: Although there is no direct connection between Maya and Dr. Wong, their work might have intersected as they both studied related fields.
-- **Motive for the Crime**: Maya's research into Echo Bonds and phantom friends could be seen as a threat to Dr. Wong's own understanding of her work or even her sanity. Maya might have perceived Dr. Wong as a rival or an obstacle to her own research.
+### Elvin
+#### - Age: 30
+#### - Gender: Male
+#### - Occupation: Wizard Teacher
+#### - Background: Elvin was born into a renowned wizard family and developed exceptional magic talent from a young age. He became a beloved teacher, known for his humor and innovative teaching methods.
+#### - Relationship with the Victim: Elvin had met Lord Worthington at a magical conference, where they engaged in a heated debate about the ethics of using magic for personal gain.
+#### - Motive for the Crime: Elvin discovered that Lord Worthington was involved in a plot to steal a powerful magical artifact, one that could grant immense power and control. He decided to kill the duke to prevent this catastrophe.
 
-#### Suspect - Elvin
-- **Age**: 30
-- **Gender**: Male
-- **Occupation**: Wizard and Teacher at the Hong Kong University Magic School
-- **Background**: A renowned wizard, Elvin was known for his teaching skills and innovative approach to magic. He had a reputation as one of the most admired young teachers at the school.
-- **Relationship with the Victim**: Although there is no direct connection between Elvin and Dr. Wong, their work might have intersected in academic or research settings.
-- **Motive for the Crime**: Elvin's teaching position gave him access to the university's resources and secrets. He might have seen Dr. Wong's research as a threat to his own reputation or the balance of magic at the university, leading him to silence her permanently.
+### Maya
+#### - Age: 22
+#### - Gender: Female
+#### - Occupation: Library Researcher
+#### - Background: Maya worked in the Lunar Library, studying ancient texts and uncovering hidden knowledge. She became obsessed with understanding the concept of phantom friends and their connection to the universe.
+#### - Relationship with the Victim: Maya had never met Lord Worthington, but she sensed his presence through the echoes of the past.
+#### - Motive for the Crime: Maya discovered that Lord Worthington was connected to a mysterious organization that sought to exploit the power of phantom friends for their own gain. She decided to kill him to protect the innocent and preserve the balance of the universe.
 
-Each suspect has a plausible motive for the crime based on their background, personality traits, and occupation. Their relationships with the victim are indirect but could be manipulated to create a convincing narrative.
+Note: Each suspect has a unique motive, backstory, and relationship with the victim, making it difficult to determine who is responsible for Lord Worthington's murder without further investigation.

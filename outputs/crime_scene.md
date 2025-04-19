@@ -1,31 +1,21 @@
-## Victim Details
+## Victim Details 
 ### Name:
-Dr. Sophia Wong
-### Age:
-28 years old
-### Occupation:
-Assistant Professor of Computer Science at the Department of Information Technology
-### Background:
-Born and raised in Hong Kong, Dr. Wong was a rising star in her field, known for her innovative approach to artificial intelligence and machine learning. She had received numerous awards and publications in top-tier conferences.
+**Lord Thomas Worthington III**
+### Age: 32
+### Occupation: Duke of Ashwood and Member of Parliament
+### Background: Born into a noble family, Lord Worthington was known for his charismatic personality, ambition, and ruthlessness in politics. He was a prominent figure in the royal court, often finding himself at odds with other powerful families.
 
-## Time of Death
-The time of death is estimated to be between 10:45 PM and 11:15 PM on a Tuesday evening, based on the forensic analysis of the victim's phone and the surrounding environment.
+## Time of Death 
+The estimated time of death is between 10 pm and 12 am on the night of March 20, 1800.
 
-## Location
-The crime scene is located at Room 304, Block A, the Hong Kong University Student Residence Building, situated in the heart of the university campus. The room is a standard single occupancy dormitory with basic furnishings.
+## Location 
+The crime scene is located within the grand ballroom of Worthington Manor, a majestic estate nestled in the English countryside. The manor is situated approximately 30 miles northwest of London, surrounded by dense forests and rolling hills.
 
-## Body Condition
-Upon discovery, Dr. Wong's body was found slumped over her desk, with her head resting on a pile of notes and research papers. Her eyes were open, staring blankly at the wall, and her skin had a pale, almost translucent quality. There were no visible signs of forced entry or struggle, but her wrists showed faint scratches. The body was dressed in a pair of yoga pants, a white tank top, and a pair of scuffed-up sneakers.
+## Body Condition 
+Lord Worthington's body was discovered face-down on the marble floor, near the fireplace. His eyes were wide open, staring at some unseen horror. A crimson stain, roughly 6 inches in diameter, had spread across his chest from a single stab wound. His hands were clasped together, and his fingers were stiff, indicating that he had died shortly after falling.
 
-## Evidence Found
-* A shattered smartphone on the floor, with cracked screens and scattered papers around it.
-* A single drop of blood on the desk's edge, near the victim's right hand.
-* A torn piece of fabric caught in the window latch, suggesting a possible exit or entry point.
-* A set of footprints leading from the room to the adjacent corridor, partially erased by the university's cleaning staff.
+## Evidence Found 
+A silver letter opener with an intricately engraved handle was found near the victim's left hand. The opener displayed faint scratches on its blade, suggesting it may have been used to inflict the fatal wound. Nearby, a torn piece of fabric caught in a nearby candelabra's metalwork. The fabric appears to be from a black coat with a distinctive red lining.
 
-## Surroundings
-The surrounding areas were relatively quiet, with only a few students walking by the residence building around 11:15 PM. The campus was well-lit, with security cameras installed throughout the buildings. However, it appeared that no one had entered or exited Room 304 between 10:45 PM and 11:15 PM.
-
-The room itself was tidy, but for a few scattered papers and books. Dr. Wong's desk was organized, with all her work materials neatly arranged in labeled folders and containers. The window was slightly ajar, allowing a gentle breeze to circulate through the room. On the wall opposite the bed, there was a large poster of the Hong Kong skyline, with a quote from Confucius in Chinese characters.
-
-As Crime Scene Investigator, I will carefully document every detail at this scene and work to unravel the mysteries surrounding Dr. Wong's tragic demise.
+## Surroundings 
+The grand ballroom was in disarray, with overturned chairs and shattered candelabras scattered about. The room's occupants had fled in haste, leaving behind a trail of confusion and panic. A faint scent of cigar smoke lingered in the air, suggesting that one or more individuals may have been smoking before the murder. A nearby door, leading to the library, was found open, as if someone had recently passed through it. The atmosphere is heavy with tension, and an eerie silence pervades the area.

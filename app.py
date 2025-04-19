@@ -7,6 +7,7 @@ from src.murder_mystery_generator.utils.yaml_utils import download_yaml, get_yam
 from src.murder_mystery_generator.main import run_crewai
 
 character_choices = ["Jeff", "Hiroharu Nakasuna", "Maya", "Elvin"]
+card_frame_img_path = "ComfyUI Workflow/Card Design"
 
 def update_selected_characters(selected):
     return ", ".join(selected)
@@ -19,6 +20,13 @@ def add_yaml_characters(file, character_options):
         return gr.CheckboxGroup(choices=character_choices)
     else:
         return character_options
+    
+def update_card_frame_image(selected_frame):
+    image_path = os.path.join(card_frame_img_path, f"{selected_frame}.png")
+    if os.path.exists(image_path):
+        return Image.open(image_path)
+    else:
+        return None
 
 # ------------------ Gradio interface ------------------
 with gr.Blocks() as demo:
@@ -34,67 +42,75 @@ with gr.Blocks() as demo:
             with gr.Column(variant="panel"):
                 with gr.Row():
                     with gr.Column():
-                        gr.Markdown("### Characters")
-                        upload_yaml = gr.File(
-                            label="Upload YAML File", file_types=[".yaml"]
-                        )
-                        character_options = gr.CheckboxGroup(
-                            choices=character_choices,
-                            label="Select Characters",
-                            interactive=True
-                        )
-                        # selected_characters = gr.Textbox(
-                        #     label="Selected Characters",
-                        #     interactive=False
-                        # )
-
-                        upload_yaml.change(
-                            add_yaml_characters,
-                            inputs=[upload_yaml, character_options],
-                            outputs=character_options
-                        )
-                        # character_options.change(
-                        #     update_selected_characters,
-                        #     inputs=character_options,
-                        #     outputs=selected_characters
-                        # )
-                    with gr.Column():
+                        with gr.Row():
+                            with gr.Column():
+                                gr.Markdown("### Characters")
+                                upload_yaml = gr.File(
+                                    label="Upload YAML File", file_types=[".yaml"]
+                                )
+                                character_options = gr.CheckboxGroup(
+                                    choices=character_choices,
+                                    label="Select Characters",
+                                    interactive=True
+                                )
+                                upload_yaml.change(
+                                    add_yaml_characters,
+                                    inputs=[upload_yaml, character_options],
+                                    outputs=character_options
+                                )
                         with gr.Row():
                             with gr.Column():
                                 gr.Markdown("### Story Settings")
                                 topic = gr.Textbox(label="Topic", interactive=True)
                                 year = gr.Number(label="Year", value=2025, interactive=True)
-                        with gr.Row():
-                            with gr.Column():
-                                gr.Markdown("### Character Generation Settings")
-                                card_bg = gr.Textbox(label="Background of Character Image", interactive=True, lines=2)
-                                with gr.Accordion('Style Combination', open=True):
-                                    with gr.Row():
-                                        weight_style = gr.Slider(
-                                            label="Weight Style",
-                                            minimum=1,
-                                            maximum=2,
-                                            value=1.5,
-                                            step=0.05,
-                                            interactive=True
-                                        )
-                                        weight_composition = gr.Slider(
-                                            label="Weight Compostion",
-                                            minimum=0.5,
-                                            maximum=1,
-                                            value=0.75,
-                                            step=0.05,
-                                            interactive=True
-                                        )
-                                        start_at = gr.Number(
-                                            label="Start At", value=0, interactive=True
-                                        )
-                                        end_at = gr.Number(
-                                            label="End At", value=1, interactive=True
-                                        )
-                                        embeds_scaling = gr.Textbox(
-                                            label="Embeds Scaling", value="K+V", interactive=True
-                                        )
+                    with gr.Column():
+                        gr.Markdown("### Character Generation Settings")
+                        with gr.Accordion('Card Design', open=True):
+                            with gr.Row():
+                                character_bg = gr.Textbox(label="Background of Character Image", interactive=True, lines=2)
+                                card_frame = gr.Dropdown(
+                                    label="Card Frame", 
+                                    choices=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], 
+                                    value=None, 
+                                    interactive=True
+                                )
+                                card_frame_img = gr.Image(
+                                    label="Card Frame", 
+                                    type="pil", 
+                                    interactive=False
+                                )
+                                card_frame.change(
+                                    update_card_frame_image, 
+                                    inputs=[card_frame], 
+                                    outputs=card_frame_img
+                                )
+                        with gr.Accordion('Style Combination', open=True):
+                            with gr.Row():
+                                weight_style = gr.Slider(
+                                    label="Weight Style",
+                                    minimum=1,
+                                    maximum=2,
+                                    value=1.5,
+                                    step=0.05,
+                                    interactive=True
+                                )
+                                weight_composition = gr.Slider(
+                                    label="Weight Compostion",
+                                    minimum=0.5,
+                                    maximum=1,
+                                    value=0.75,
+                                    step=0.05,
+                                    interactive=True
+                                )
+                                start_at = gr.Number(
+                                    label="Start At", value=0, interactive=True
+                                )
+                                end_at = gr.Number(
+                                    label="End At", value=1, interactive=True
+                                )
+                                embeds_scaling = gr.Textbox(
+                                    label="Embeds Scaling", value="K+V", interactive=True
+                                )
                 
                 run_btn = gr.Button("Run", variant="primary")
 

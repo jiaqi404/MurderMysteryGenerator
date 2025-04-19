@@ -4,7 +4,7 @@ import yaml
 import os
 from pathlib import Path
 from src.murder_mystery_generator.utils.yaml_utils import download_yaml, get_yaml_name
-from src.murder_mystery_generator.main import run_crewai
+from src.murder_mystery_generator.main import run_crewai, generate_character_card_info
 
 character_choices = ["Jeff", "Hiroharu Nakasuna", "Maya", "Elvin"]
 card_frame_img_path = "ComfyUI Workflow/Card Design"
@@ -22,9 +22,16 @@ def add_yaml_characters(file, character_options):
         return character_options
     
 def update_card_frame_image(selected_frame):
-    image_path = os.path.join(card_frame_img_path, f"{selected_frame}.png")
-    if os.path.exists(image_path):
-        return Image.open(image_path)
+    selected_card_frame_path = os.path.join(card_frame_img_path, f"{selected_frame}.png")
+    if os.path.exists(selected_card_frame_path):
+        return Image.open(selected_card_frame_path)
+    else:
+        return None
+    
+def update_card_frame_path(selected_frame):
+    selected_card_frame_path = os.path.join(card_frame_img_path, f"{selected_frame}.png")
+    if os.path.exists(selected_card_frame_path):
+        return selected_card_frame_path
     else:
         return None
 
@@ -61,8 +68,8 @@ with gr.Blocks() as demo:
                         with gr.Row():
                             with gr.Column():
                                 gr.Markdown("### Story Settings")
-                                topic = gr.Textbox(label="Topic", interactive=True)
-                                year = gr.Number(label="Year", value=2025, interactive=True)
+                                topic = gr.Textbox(label="Topic", value="Cyberpunk", interactive=True)
+                                year = gr.Number(label="Year", value=2077, interactive=True)
                     with gr.Column():
                         gr.Markdown("### Character Generation Settings")
                         with gr.Accordion('Card Design', open=True):
@@ -79,12 +86,22 @@ with gr.Blocks() as demo:
                                     type="pil", 
                                     interactive=False
                                 )
+                                card_frame_img_path_text = gr.Textbox(
+                                    label="Card Frame Image Path", 
+                                    interactive=False,
+                                    visible=False
+                                )
                                 card_frame.change(
                                     update_card_frame_image, 
                                     inputs=[card_frame], 
                                     outputs=card_frame_img
                                 )
-                        with gr.Accordion('Style Combination', open=True):
+                                card_frame.change(
+                                    update_card_frame_path,
+                                    inputs=[card_frame],
+                                    outputs=card_frame_img_path_text
+                                )
+                        with gr.Accordion('Style Combination', open=False):
                             with gr.Row():
                                 weight_style = gr.Slider(
                                     label="Weight Style",
@@ -122,6 +139,16 @@ with gr.Blocks() as demo:
         text_input = gr.Textbox(label="Enter your text", placeholder="Type something...")
         image_output = gr.Image(label="Generated Image")
 
-    run_btn.click(run_crewai, inputs=[character_options, topic, year], outputs=output_script)
+    run_btn.click(
+        run_crewai, 
+        inputs=[character_options, topic, year], 
+        outputs=output_script
+    ).success(
+        generate_character_card_info,
+        inputs=[
+            character_options,
+            card_frame_img_path_text
+        ]
+    )
 
 demo.launch()

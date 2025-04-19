@@ -1,21 +1,31 @@
-## Victim Details 
+## Victim Details
 ### Name:
-**Lord Thomas Worthington III**
-### Age: 32
-### Occupation: Duke of Ashwood and Member of Parliament
-### Background: Born into a noble family, Lord Worthington was known for his charismatic personality, ambition, and ruthlessness in politics. He was a prominent figure in the royal court, often finding himself at odds with other powerful families.
+**Bertha Jinglewhiff**
+### Age:
+42 years old
+### Occupation:
+Professor of Ancient Runes at Hogwarts School of Witchcraft and Wizardry
+### Background:
+Born in a small village in the Scottish Highlands, Bertha was an accomplished linguist and expert in the study of ancient magical languages. She had been teaching at Hogwarts for over 15 years and was well-respected among her colleagues.
 
-## Time of Death 
-The estimated time of death is between 10 pm and 12 am on the night of March 20, 1800.
+## Time of Death
+The time of death is estimated to be around 10:00 PM on a chilly autumn evening, with the body discovered by the Hogwarts gamekeeper, Rubeus Hagrid, approximately two hours later.
 
-## Location 
-The crime scene is located within the grand ballroom of Worthington Manor, a majestic estate nestled in the English countryside. The manor is situated approximately 30 miles northwest of London, surrounded by dense forests and rolling hills.
+## Location
+The crime scene is located in Bertha's office, situated in one of the ancient towers of Hogwarts Castle. The office is situated near the restricted section of the library and is easily accessible through a hidden passageway from the castle's east wing.
 
-## Body Condition 
-Lord Worthington's body was discovered face-down on the marble floor, near the fireplace. His eyes were wide open, staring at some unseen horror. A crimson stain, roughly 6 inches in diameter, had spread across his chest from a single stab wound. His hands were clasped together, and his fingers were stiff, indicating that he had died shortly after falling.
+## Body Condition
+When Hagrid discovered the body, Bertha was found slumped over her desk, with her head resting on a stack of dusty tomes. Her eyes were frozen in a permanent stare, and her skin had taken on a pale, waxy complexion. A faint scent of old parchment and dust filled the air.
 
-## Evidence Found 
-A silver letter opener with an intricately engraved handle was found near the victim's left hand. The opener displayed faint scratches on its blade, suggesting it may have been used to inflict the fatal wound. Nearby, a torn piece of fabric caught in a nearby candelabra's metalwork. The fabric appears to be from a black coat with a distinctive red lining.
+## Evidence Found
+Several pieces of evidence were recovered from the scene:
 
-## Surroundings 
-The grand ballroom was in disarray, with overturned chairs and shattered candelabras scattered about. The room's occupants had fled in haste, leaving behind a trail of confusion and panic. A faint scent of cigar smoke lingered in the air, suggesting that one or more individuals may have been smoking before the murder. A nearby door, leading to the library, was found open, as if someone had recently passed through it. The atmosphere is heavy with tension, and an eerie silence pervades the area.
+*   A torn piece of fabric caught in the window lock, which appears to be a fragment of Bertha's own cloak.
+*   A set of footprints leading from the office window down to the castle's east wing, which are now missing due to the body's position.
+*   A broken quill pen on the floor, with an unusual residue that may indicate the use of a dark magic spell.
+*   A small, hidden compartment in Bertha's desk drawer, containing a cryptic message scrawled on a piece of parchment.
+
+## Surroundings
+The office itself was in disarray, with books and papers scattered across the floor. The walls were lined with shelves, containing an assortment of ancient tomes and rare manuscripts. A large, ornate mirror hung above the desk, reflecting the dim light that filtered through the stained glass window.
+
+A faint scent of smoke lingered in the air, suggesting that a fire may have been lit earlier that night. However, no signs of forced entry or struggle were apparent, leading investigators to suspect that Bertha's murder may have been a carefully planned and executed act.

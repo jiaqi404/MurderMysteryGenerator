@@ -1,28 +1,18 @@
 import gradio as gr
 from PIL import Image
-import io
-import base64
 import yaml
+import os
+from pathlib import Path
+from src.murder_mystery_generator.utils.yaml_utils import download_yaml, get_yaml_name
+from src.murder_mystery_generator.main import run_crewai
 
 character_choices = ["Jeff", "Hiroharu Nakasuna", "Maya", "Elvin"]
-
-# Dummy function to generate an image from text
-def text_to_image(text):
-    # Create a blank image with text (for demonstration purposes)
-    img = Image.new('RGB', (512, 512), color=(255, 255, 255))
-    return img
 
 def update_selected_characters(selected):
     return ", ".join(selected)
 
-def get_yaml_name(file):
-    if file is None:
-        return None
-    with open(file.name, 'r') as f:
-        data = yaml.safe_load(f)
-    return data.get('name')
-
 def add_yaml_characters(file, character_options):
+    download_yaml(file, "src/murder_mystery_generator/characters")
     character_name = get_yaml_name(file)
     if character_name is not None and character_name not in character_choices:
         character_choices.append(character_name)
@@ -116,6 +106,6 @@ with gr.Blocks() as demo:
         text_input = gr.Textbox(label="Enter your text", placeholder="Type something...")
         image_output = gr.Image(label="Generated Image")
 
-    run_btn.click(text_to_image, inputs=text_input, outputs=image_output)
+    run_btn.click(run_crewai, inputs=[character_options, topic, year], outputs=output_script)
 
 demo.launch()

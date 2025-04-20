@@ -1,12 +1,14 @@
 from PIL import Image, ImageDraw, ImageFont
 import yaml
 
-def transfer_to_rgb(rgba):
-    rgba = rgba.lstrip('rgba(')
-    rgba = rgba.rstrip(')')
-    rgba_list = rgba.split(',')
-    rgb = tuple(int(float(value)) for value in rgba_list[:3])
-    return rgb
+def transfer_to_rgb(h):
+    # rgba = rgba.lstrip('rgba(')
+    # rgba = rgba.rstrip(')')
+    # rgba_list = rgba.split(',')
+    # rgb = tuple(int(float(value)) for value in rgba_list[:3])
+    # return rgb
+    h = h.lstrip('#')
+    return tuple(int(h[i:i+2], 16) for i in (0, 2, 4))
 
 def get_content(character_md, character_name, content_name):
     with open(character_md, 'r', encoding='utf-8') as file:
@@ -57,6 +59,8 @@ def limit_text_width(draw, text, font, color, image_width, spacing, start_height
         draw.text(line_position, line, font=font, fill=color)
         start_height += line_height + line_spacing
 
+    return start_height
+
 def generate_card_info(
         image_path, 
         output_path, 
@@ -69,6 +73,8 @@ def generate_card_info(
         color=(255, 255, 255)
     ):
     
+    start_height = 240
+
     # 重新加载图片
     image = Image.open(image_path)
     draw = ImageDraw.Draw(image)
@@ -84,18 +90,18 @@ def generate_card_info(
     # 绘制标题
     title_bbox = draw.textbbox((0, 0), title, font=title_font)
     title_width, title_height = title_bbox[2] - title_bbox[0], title_bbox[3] - title_bbox[1]
-    title_position = ((image_width - title_width) // 2, 230)
+    title_position = ((image_width - title_width) // 2, start_height)
     draw.text(title_position, title, font=title_font, fill=color)
     
     # 绘制副标题，自动换行
-    limit_text_width(
+    start_height_2 = limit_text_width(
         draw=draw,
         text=subtitle,
         font=subtitle_font,
         color=color,
         image_width=image_width,
         spacing=280,
-        start_height=380,
+        start_height=start_height + 140,
         line_spacing=12
     )
     
@@ -107,7 +113,7 @@ def generate_card_info(
         color=color, 
         image_width=image_width, 
         spacing=320, 
-        start_height=500, 
+        start_height=start_height_2 + 40, 
         line_spacing=12
     )
     

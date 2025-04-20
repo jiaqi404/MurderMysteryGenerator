@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 from src.murder_mystery_generator.utils.yaml_utils import download_yaml, get_yaml_name
 from src.murder_mystery_generator.main import run_crewai, generate_character_card_info
-from src.murder_mystery_generator.utils.websocket_util import write_characters_json
+from src.murder_mystery_generator.utils.websocket_util import write_characters_json, show_comfy_images
 
 character_choices = ["Jeff", "Hiroharu Nakasuna", "Maya", "Elvin"]
 card_frame_img_path = "ComfyUI Workflow/Card Design"
@@ -129,20 +129,18 @@ with gr.Blocks() as demo:
                             end_at = gr.Number(
                                 label="End At", value=1, interactive=True
                             )
-                            # embeds_scaling = gr.Textbox(
-                            #     label="Embeds Scaling", value="K+V", interactive=True
-                            # )
                 
                 run_btn = gr.Button("Run", variant="primary")
 
             with gr.Column():
-                gallery = gr.Gallery(label="Generated Cards", show_label=True, elem_id="gallery", columns=[4], object_fit="contain", height="auto")
+                gallery = gr.Gallery(label="Generated Cards", show_label=True, elem_id="gallery", columns=[4], object_fit="contain", height="auto", type="filepath")
                 output_script = gr.Textbox(label="Output Script", interactive=False, lines=10)
     
     with gr.Tab("Game"):
         text_input = gr.Textbox(label="Enter your text", placeholder="Type something...")
         image_output = gr.Image(label="Generated Image")
 
+    # ------------------ Main functions ------------------
     run_btn.click(
         run_crewai, 
         inputs=[character_options, topic, year], 
@@ -164,6 +162,9 @@ with gr.Blocks() as demo:
             end_at,
             character_options
         ]
+    ).success(
+        show_comfy_images,
+        outputs=gallery
     )
 
 demo.launch()

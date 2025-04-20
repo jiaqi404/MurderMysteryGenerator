@@ -1,29 +1,39 @@
 ## Crime Scene
-The Great Hall of the Wysteria Academy of Magic was in disarray when the body of Elwynn Asteria was discovered. The room, usually filled with the sound of laughter and learning, was instead shrouded in an eerie silence. The air was thick with the scent of burned incense and ozone, and a faint hum of magic lingered, like the whispers of forgotten spells.
+The crime scene is located in a secluded area within the Wysteria Academy's castle walls, specifically in a laboratory deep beneath the earth. The room is situated near the academy's central hub, accessible through a secret passageway only known to authorized personnel. Upon examination, the victim's body was found in a state of rigor mortis, indicating that death had occurred several hours prior to discovery. Eryndor's eyes were open, gazing upwards towards the laboratory ceiling, and his skin had a pale, almost translucent quality. A faint scent of ozone hung around him, suggesting some residual magical energy.
 
 ## Suspect Profiles
 
-### Jeff
-Jeff's eyes darted nervously around the room as he spoke to the investigators. His alibi for the time of the murder seemed shaky at best, and his family's dark past made him a prime suspect. However, his fragile mental state and lack of motive made it difficult to pin anything on him.
+### **Suspect 1: Lyra Flynn**
+- Age: 28
+- Occupation: Research Assistant in the Department of Arcane Research
+- Background: Lyra was Eryndor's research assistant and had been working closely with him on a top-secret project involving elemental magic. She was known for her exceptional magical skills, but also had a reputation for being fiercely competitive.
+- Motive: Lyra stood to gain significantly from Eryndor's research, which could lead to breakthroughs in magical energies. With Eryndor out of the way, she could take credit for his work and advance her own career.
 
-### Maya
-Maya's research on phantom friends had led her to investigate Elwynn's activities, but she claimed she didn't know the victim personally. Her empty expression and distant demeanor raised suspicions, but her expertise in Echo Bonds made her a valuable resource in unraveling the mystery.
+### **Suspect 2: Kael Darkshadow**
+- Age: 35
+- Occupation: Head of Security at Wysteria Academy
+- Background: Kael was a former member of the academy's security team who had been demoted after a high-profile incident involving magical property theft. He had been quietly building his own network of informants and allies within the academy.
+- Motive: Kael had a personal vendetta against Eryndor, who he believed had unfairly targeted him for the demotion. With Eryndor out of the way, Kael could exact revenge on those responsible.
 
-### Elvin
-Elvin's reputation as a respected teacher and innovative educator made him an unlikely suspect. However, his close relationship with Elwynn Asteria and his discovery of a spell to purify polluted magic energy hinted at a deeper motive. His calm demeanor and collected speech belied a potential for hidden anger.
+### **Suspect 3: Elwynn Starweaver**
+- Age: 25
+- Occupation: Student at Wysteria Academy
+- Background: Elwynn was a talented young wizard with exceptional magical abilities. She had been a protégé of Eryndor's and had shown great promise in her research.
+- Motive: Elwynn stood to lose everything if Eryndor's research went public. If his work on elemental magic became widely known, it could threaten the stability of the entire magical community.
 
-### Hiroharu Nakasuna
-Hiroharu's troubled past as a demon hunter had left emotional scars, but her dedication to justice made her a credible suspect. Her task force focused on eliminating the Devouring Demon had likely left her with a sense of purpose and drive. However, her lack of connection to Elwynn Asteria made it difficult to tie her directly to the crime.
-
-### The Shadowy Figure
-The Phantom friend researcher's existence was shrouded in mystery, but their connection to Elwynn's research was undeniable. Their ability to manipulate magic and feed on Elwynn's energy made them a formidable suspect.
+### **Suspect 4: Arin Vexar**
+- Age: 40
+- Occupation: Former Lead Wizard at Wysteria Academy (Eryndor's predecessor)
+- Background: Arin had a long-standing rivalry with Eryndor, who he believed had stolen the spotlight and recognition that rightfully belonged to him.
+- Motive: Arin saw Eryndor as a threat to his own legacy and reputation. By eliminating him, Arin could regain the upper hand and restore his status within the magical community.
 
 ## True Culprit
+The true culprit is **Lyra Flynn**, who had been working closely with Eryndor on the top-secret project involving elemental magic. Lyra stood to gain significantly from Eryndor's research, which could lead to breakthroughs in magical energies. With Eryndor out of the way, she could take credit for his work and advance her own career.
 
-After conducting an exhaustive investigation, it became clear that Hiroharu Nakasuna was the true culprit behind Elwynn Asteria's murder. Her troubled past and drive for justice had led her to believe that Elwynn was connected to a dark force or supernatural entity. However, further analysis revealed that Elwynn was actually working with The Shadowy Figure, a manifestation of her own consciousness.
+The murder was committed using a combination of stealth and magical manipulation. Lyra had been sneaking into the laboratory at night to observe Eryndor's experiments and gather notes. On the night of the murder, she created a diversion by triggering a magical explosion in the nearby laboratory, which led Eryndor away from his experiment. Once he was alone, Lyra used her own magical abilities to knock him unconscious and then administered a potion that would allow her to cover her tracks.
 
-Hiroharu's demons had clouded her judgment, and she mistakenly believed that Elwynn was a threat. Her actions were motivated by a desire to protect herself and others from the supernatural forces she feared. The broken crystal orb, torn black silk fabric, and silver dust on the edge of the dais were all red herrings planted by Hiroharu to mislead the investigators.
+To further deceive the investigation, Lyra planted evidence at the scene to point towards other suspects. She left the shattered crystal vial containing the glowing purple liquid on the workbench, as well as the torn piece of fabric caught in the door handle. The footprints leading from the laboratory to the ventilation shaft were a clever ruse, designed to lead investigators away from her own trail.
 
-The Shadowy Figure, however, had other plans. It had been feeding on Elwynn's magic, manipulating her research and actions to further its own agenda. When Hiroharu discovered this connection, she realized too late that she had made a grave mistake. The Shadowy Figure had manipulated Elwynn into revealing the location of the Great Hall, where it would be waiting for Hiroharu.
+The cryptic notes and sketches in Eryndor's notebook were also carefully planted by Lyra, who had been secretly working on the project with him. These notes were meant to suggest that Eryndor was getting close to a major breakthrough, which would only serve to further fuel speculation about his untimely death.
 
-In the end, The Shadowy Figure eliminated both Elwynn Asteria and Hiroharu Nakasuna, using their combined magic to create an elaborate web of deception and misdirection. The Phantom friend researcher remained at large, its true intentions and motivations hidden behind a veil of mystery.
+In the end, it was Lyra's own ambition and desire for recognition that led her down the path of murder. Her carefully constructed alibi and clever manipulation of evidence made it seem as though the investigation would never uncover the truth – until now.

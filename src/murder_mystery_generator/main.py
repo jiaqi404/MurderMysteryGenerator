@@ -3,7 +3,7 @@ import warnings
 from src.murder_mystery_generator.crew import MurderMysteryGenerator
 from pathlib import Path
 from src.murder_mystery_generator.utils.yaml_utils import get_selected_characters_path, format_characters
-from src.murder_mystery_generator.utils.card_utils import get_content, generate_card_info
+from src.murder_mystery_generator.utils.card_utils import get_content, generate_card_info, transfer_to_rgb
 import os
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
@@ -13,13 +13,20 @@ output_path = 'outputs/murder_case_outline.md'
 
 character_md_path = "outputs/characters.md"
 card_output_path = "outputs/cards"
+title_font = "fonts/KolkerBrush-Regular.ttf"
+subtitle_font = "fonts/HinaMincho-Regular.ttf"
+text_font = "fonts/HinaMincho-Regular.ttf"
 
 def generate_character_card_info(
         character_names,
-        card_frame_path
+        card_frame_path,
+        font_color
     ):
     for character_name in character_names:
-        img_path = os.path.join(card_output_path, f"{character_name}.png")
+        img_path = os.path.join(card_output_path, f"{character_name}_1.png")
+        print(font_color)
+        font_color_rgb = transfer_to_rgb(font_color)
+        print(font_color_rgb)
 
         print("Generating card of "+character_name+"...")
         generate_card_info(
@@ -27,7 +34,11 @@ def generate_character_card_info(
             output_path=img_path,
             title=character_name,
             subtitle=get_content(character_md_path, character_name, "Occupation"),
-            text=get_content(character_md_path, character_name, "Background")
+            text=get_content(character_md_path, character_name, "Background") + " " + get_content(character_md_path, character_name, "Relationship with the Victim"),
+            title_font=title_font,
+            subtitle_font=subtitle_font,
+            text_font=text_font,
+            color=font_color_rgb
         )
 
 # ------------------ Main function ------------------ 

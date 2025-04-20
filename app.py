@@ -73,61 +73,64 @@ with gr.Blocks() as demo:
                     with gr.Column():
                         gr.Markdown("### Character Generation Settings")
                         with gr.Accordion('Card Design', open=True):
-                            with gr.Row():
-                                character_bg = gr.Textbox(label="Background of Character Image", interactive=True, lines=2)
-                                card_frame = gr.Dropdown(
-                                    label="Card Frame", 
-                                    choices=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], 
-                                    value=None, 
-                                    interactive=True
-                                )
-                                card_frame_img = gr.Image(
-                                    label="Card Frame", 
-                                    type="pil", 
-                                    interactive=False
-                                )
-                                card_frame_img_path_text = gr.Textbox(
-                                    label="Card Frame Image Path", 
-                                    interactive=False,
-                                    visible=False
-                                )
-                                card_frame.change(
-                                    update_card_frame_image, 
-                                    inputs=[card_frame], 
-                                    outputs=card_frame_img
-                                )
-                                card_frame.change(
-                                    update_card_frame_path,
-                                    inputs=[card_frame],
-                                    outputs=card_frame_img_path_text
-                                )
+                            character_bg = gr.Textbox(label="Background of Character Image", interactive=True, lines=2)
+                            card_frame = gr.Dropdown(
+                                label="Card Frame", 
+                                choices=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], 
+                                value=None, 
+                                interactive=True
+                            )
+                            font_color = gr.ColorPicker(
+                                label="Font Color", 
+                                value="#FFFFFF", 
+                                interactive=True
+                            )
+                            card_frame_img = gr.Image(
+                                label="Card Frame", 
+                                type="pil", 
+                                interactive=False
+                            )
+                            card_frame_img_path_text = gr.Textbox(
+                                label="Card Frame Image Path", 
+                                interactive=False,
+                                visible=False
+                            )
+                            card_frame.change(
+                                update_card_frame_image, 
+                                inputs=[card_frame], 
+                                outputs=card_frame_img
+                            )
+                            card_frame.change(
+                                update_card_frame_path,
+                                inputs=[card_frame],
+                                outputs=card_frame_img_path_text
+                            )
                         with gr.Accordion('Style Combination', open=False):
-                            with gr.Row():
-                                weight_style = gr.Slider(
-                                    label="Weight Style",
-                                    minimum=1,
-                                    maximum=2,
-                                    value=1.5,
-                                    step=0.05,
-                                    interactive=True
-                                )
-                                weight_composition = gr.Slider(
-                                    label="Weight Compostion",
-                                    minimum=0.5,
-                                    maximum=1,
-                                    value=0.75,
-                                    step=0.05,
-                                    interactive=True
-                                )
-                                start_at = gr.Number(
-                                    label="Start At", value=0, interactive=True
-                                )
-                                end_at = gr.Number(
-                                    label="End At", value=1, interactive=True
-                                )
-                                embeds_scaling = gr.Textbox(
-                                    label="Embeds Scaling", value="K+V", interactive=True
-                                )
+                            weight_style = gr.Slider(
+                                label="Weight Style",
+                                minimum=1,
+                                maximum=2,
+                                value=1.5,
+                                step=0.05,
+                                interactive=True
+                            )
+                            weight_composition = gr.Slider(
+                                label="Weight Compostion",
+                                minimum=0.5,
+                                maximum=1,
+                                value=0.75,
+                                step=0.05,
+                                interactive=True
+                            )
+                            start_at = gr.Number(
+                                label="Start At", value=0, interactive=True
+                            )
+                            end_at = gr.Number(
+                                label="End At", value=1, interactive=True
+                            )
+                            embeds_scaling = gr.Textbox(
+                                label="Embeds Scaling", value="K+V", interactive=True
+                            )
                 
                 run_btn = gr.Button("Run", variant="primary")
 
@@ -147,7 +150,8 @@ with gr.Blocks() as demo:
         generate_character_card_info,
         inputs=[
             character_options,
-            card_frame_img_path_text
+            card_frame_img_path_text,
+            font_color
         ]
     )
 

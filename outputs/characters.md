@@ -1,39 +1,41 @@
-## Suspect - Lyra
-- **Age**: 25
-- **Gender**: Female
-- **Occupation**: Adventurer and Cartographer
-- **Background**: Raised by her parents, accomplished cartographers and naturalists, to be independent and self-sufficient. Trained in navigation, botany, and deciphering ancient symbols.
-- **Relationship with the Victim**: Lyra had a professional relationship with Bertha, as both were professors at Hogwarts School of Witchcraft and Wizardry.
-- **Motive for the Crime**: Lyra stood to gain from Bertha's research on ancient magical languages. With Bertha gone, Lyra could claim ownership of her research and continue her work without any competition.
-
-## Suspect - Elvin
-- **Age**: 30
-- **Gender**: Male
-- **Occupation**: Professor of Ancient Runes at Hogwarts School of Witchcraft and Wizardry
-- **Background**: Trained by his professor parents in magic, became a renowned wizard and teacher.
-- **Relationship with the Victim**: Elvin had a close professional relationship with Bertha, as both were professors at Hogwarts School of Witchcraft and Wizardry.
-- **Motive for the Crime**: Elvin was frustrated with Bertha's recent research on ancient magical languages. He believed that her findings could be misused by dark forces and decided to silence her.
-
-## Suspect - Maya
-- **Age**: 22
-- **Gender**: Female
-- **Occupation**: Researcher at the Lunar Library
-- **Background**: Dedicated to understanding Echo Bonds, a mysterious phenomenon connected to the human psyche.
-- **Relationship with the Victim**: Maya had a personal connection with Bertha through their shared interest in ancient magical languages. They had collaborated on several projects together.
-- **Motive for the Crime**: Maya's research was stalled due to Bertha's recent findings. She believed that Bertha had discovered something critical about Echo Bonds and decided to take matters into her own hands.
-
-## Suspect - Jeff
+## Suspect 1 - **Jeff**
 - **Age**: 17
 - **Gender**: Male
-- **Occupation**: Student at Hogwarts School of Witchcraft and Wizardry
-- **Background**: Recently transferred from the Chinese mainland, experiencing supernatural events in his new school.
-- **Relationship with the Victim**: No direct relationship, but both were students at Hogwarts.
-- **Motive for the Crime**: Jeff was desperate to uncover more information about his family's past. He believed that Bertha held crucial knowledge and decided to use her research for his own gain.
+- **Occupation**: High school student studying traditional Chinese subjects
+- **Background**: Transferred to Hong Kong from the mainland, returns home after a long absence due to his family's supernatural entanglements. His great-grandfather was involved in complex emotional entanglements and a bloodbath that led to his flight.
+- **Relationship with the Victim**: No known direct connection to Elwynn Asteria
+- **Motive for the Crime**: Jeff's peculiar thinking and fear of the unknown could have driven him to lash out at the victim, whom he might have perceived as an outsider or a threat. His family's dark past and the supernatural events in the school might have contributed to his fragile mental state.
 
-## Suspect - Hiroharu Nakasuna
+## Suspect 2 - **Maya**
+- **Age**: 22
+- **Gender**: Female
+- **Occupation**: Researcher at the Lunar Library, studying Echo Bonds
+- **Background**: Maya's dedication to her research and her yearning for connection could make her a suspect. Her emptiness and longing might have led her to explore dark or supernatural avenues in search of understanding.
+- **Relationship with the Victim**: No known direct connection to Elwynn Asteria
+- **Motive for the Crime**: Maya's curiosity about phantom friends and her desire to resolve her own shadows could have driven her to investigate Elwynn's activities, perhaps leading to a violent confrontation.
+
+## Suspect 3 - **Elvin**
+- **Age**: 30
+- **Gender**: Male
+- **Occupation**: Teacher at the Wysteria Academy of Magic
+- **Background**: Renowned for his humor and innovative teaching methods. He discovered a spell to purify polluted magic energy, earning widespread respect.
+- **Relationship with the Victim**: Known to have worked alongside Elwynn Asteria as an apprentice enchantress
+- **Motive for the Crime**: Elvin's success and reputation might have made him feel threatened by Elwynn's potential. His love of teaching and desire to protect his students could have led him to eliminate her, especially if he believed she was a danger to them.
+
+## Suspect 4 - **Hiroharu Nakasuna**
 - **Age**: 24
 - **Gender**: Female
-- **Occupation**: Public Security Demon Hunter
-- **Background**: Trained in combat magic, joined the task force dedicated to eliminating special-class demons.
-- **Relationship with the Victim**: No direct relationship, but both were involved in the magical community.
-- **Motive for the Crime**: Hiroharu's agency had been investigating a possible connection between demons and ancient magical languages. Bertha's research could have provided critical information that would help them achieve their goals.
+- **Occupation**: Demon hunter for the Public Security Demon Special Unit
+- **Background**: Raised by her mother after her father's death, Hiroharu became a demon hunter to cope with her traumatic upbringing. Her recent task force focused on eliminating the Devouring Demon has likely left her with emotional scars and a drive for justice.
+- **Relationship with the Victim**: No known direct connection to Elwynn Asteria
+- **Motive for the Crime**: Hiroharu's troubled past and feelings of inadequacy could have led her to believe that Elwynn was connected to a dark force or supernatural entity. Her sense of duty as a demon hunter might have driven her to investigate and eliminate the victim, whom she saw as a potential threat.
+
+## Suspect 5 - **The Shadowy Figure**
+- **Age**: Unknown
+- **Gender**: Unknown
+- **Occupation**: Phantom friend researcher (unofficial)
+- **Background**: Maya's research on phantom friends might have led her to investigate this mysterious figure. The Shadowy Figure could be a manifestation of Elwynn's consciousness or a supernatural entity that feeds on magic.
+- **Relationship with the Victim**: Unknown, but possibly connected through Elwynn's research
+- **Motive for the Crime**: The Shadowy Figure's existence is tied to Elwynn's research and death. It might have been drawn to her magic or seen her as a threat to its own existence, leading it to commit the murder.
+
+Note: Since none of these characters are detectives or investigators, they do not actively investigate the crime. Instead, each has a plausible motive for committing the murder based on their background, relationships, and personality traits.

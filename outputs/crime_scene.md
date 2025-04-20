@@ -1,31 +1,25 @@
-## Victim Details
-### Name:
-**Bertha Jinglewhiff**
-### Age:
-42 years old
-### Occupation:
-Professor of Ancient Runes at Hogwarts School of Witchcraft and Wizardry
-### Background:
-Born in a small village in the Scottish Highlands, Bertha was an accomplished linguist and expert in the study of ancient magical languages. She had been teaching at Hogwarts for over 15 years and was well-respected among her colleagues.
+I now can give a great answer
 
-## Time of Death
-The time of death is estimated to be around 10:00 PM on a chilly autumn evening, with the body discovered by the Hogwarts gamekeeper, Rubeus Hagrid, approximately two hours later.
+
+## Victim Details - Name: Elwynn Asteria
+- Age: 32
+- Occupation: Apprentice Enchantress at the Wysteria Academy of Magic
+- Background: Elwynn was a talented young witch from a family of skilled magic-users. She had been studying at the Wysteria Academy for five years, specializing in elemental magic and spellcraft.
+
+## Time of Death - Estimated: 10:45 PM, 23rd February 1999
+
 
 ## Location
-The crime scene is located in Bertha's office, situated in one of the ancient towers of Hogwarts Castle. The office is situated near the restricted section of the library and is easily accessible through a hidden passageway from the castle's east wing.
+The crime scene is located within the restricted area of the Wysteria Academy's Great Hall. The room is a large, high-ceilinged chamber with long tables and benches arranged in a semi-circle around a central dais. The walls are adorned with intricate carvings of magical creatures and symbols.
 
 ## Body Condition
-When Hagrid discovered the body, Bertha was found slumped over her desk, with her head resting on a stack of dusty tomes. Her eyes were frozen in a permanent stare, and her skin had taken on a pale, waxy complexion. A faint scent of old parchment and dust filled the air.
+Elwynn's body was found lying on the floor, approximately 20 feet away from the central dais. She was positioned in a unnatural pose, with her arms and legs splayed out to the sides. Her eyes were open, and her pupils had constricted into tiny pinpoints, giving her an eerily lifelike appearance. A thin layer of frost coated her skin, despite the warmth of the Great Hall.
 
-## Evidence Found
-Several pieces of evidence were recovered from the scene:
-
-*   A torn piece of fabric caught in the window lock, which appears to be a fragment of Bertha's own cloak.
-*   A set of footprints leading from the office window down to the castle's east wing, which are now missing due to the body's position.
-*   A broken quill pen on the floor, with an unusual residue that may indicate the use of a dark magic spell.
-*   A small, hidden compartment in Bertha's desk drawer, containing a cryptic message scrawled on a piece of parchment.
+## Evidence Found - Initial Observations:
+- A broken crystal orb lies shattered on the floor near Elwynn's head.
+- A torn piece of black silk fabric is caught in a nearby candelabra.
+- A faint smudge of silver dust is visible on the edge of the dais, possibly from a spell or potion.
+- Elwynn's body shows signs of having been subjected to a magical binding spell, with subtle scars and burns on her wrists and ankles.
 
 ## Surroundings
-The office itself was in disarray, with books and papers scattered across the floor. The walls were lined with shelves, containing an assortment of ancient tomes and rare manuscripts. A large, ornate mirror hung above the desk, reflecting the dim light that filtered through the stained glass window.
-
-A faint scent of smoke lingered in the air, suggesting that a fire may have been lit earlier that night. However, no signs of forced entry or struggle were apparent, leading investigators to suspect that Bertha's murder may have been a carefully planned and executed act.
+The Great Hall was in disarray, with chairs overturned and tables knocked over. The air was thick with the scent of burned incense and ozone. A faint hum of magic lingered, like the whispers of forgotten spells. The candles that lined the walls cast flickering shadows on the walls, making it seem as though the very spirits of the dead were watching from the darkness.

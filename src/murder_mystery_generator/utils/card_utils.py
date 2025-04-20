@@ -1,11 +1,20 @@
 from PIL import Image, ImageDraw, ImageFont
 import yaml
 
+def transfer_to_rgb(h):
+    # rgba = rgba.lstrip('rgba(')
+    # rgba = rgba.rstrip(')')
+    # rgba_list = rgba.split(',')
+    # rgb = tuple(int(float(value)) for value in rgba_list[:3])
+    # return rgb
+    h = h.lstrip('#')
+    return tuple(int(h[i:i+2], 16) for i in (0, 2, 4))
+
 def get_content(character_md, character_name, content_name):
     with open(character_md, 'r', encoding='utf-8') as file:
         character_md = file.read()
     lines = character_md.splitlines()
-    content = None
+    content = ""
     found_character = False
 
     for line in lines:
@@ -21,7 +30,7 @@ def get_content(character_md, character_name, content_name):
 def limit_text_width(draw, text, font, color, image_width, spacing, start_height, line_spacing):
     # 绘制小文字，自动换行
     if text is None:
-        text = "None"
+        text = ""
     max_width = image_width - spacing
     lines = []
     words = text.split()
@@ -50,6 +59,8 @@ def limit_text_width(draw, text, font, color, image_width, spacing, start_height
         draw.text(line_position, line, font=font, fill=color)
         start_height += line_height + line_spacing
 
+    return start_height
+
 def generate_card_info(
         image_path, 
         output_path, 
@@ -62,14 +73,16 @@ def generate_card_info(
         color=(255, 255, 255)
     ):
     
+    start_height = 240
+
     # 重新加载图片
     image = Image.open(image_path)
     draw = ImageDraw.Draw(image)
     
     # 加载系统默认字体
-    title_font = ImageFont.truetype(title_font, 80)
-    subtitle_font = ImageFont.truetype(subtitle_font, 28)
-    small_text_font = ImageFont.truetype(text_font, 20)
+    title_font = ImageFont.truetype(title_font, 128)
+    subtitle_font = ImageFont.truetype(subtitle_font, 32)
+    small_text_font = ImageFont.truetype(text_font, 24)
     
     # 获取图片尺寸
     image_width, image_height = image.size
@@ -77,19 +90,19 @@ def generate_card_info(
     # 绘制标题
     title_bbox = draw.textbbox((0, 0), title, font=title_font)
     title_width, title_height = title_bbox[2] - title_bbox[0], title_bbox[3] - title_bbox[1]
-    title_position = ((image_width - title_width) // 2, 220)
+    title_position = ((image_width - title_width) // 2, start_height)
     draw.text(title_position, title, font=title_font, fill=color)
     
     # 绘制副标题，自动换行
-    limit_text_width(
+    start_height_2 = limit_text_width(
         draw=draw,
         text=subtitle,
         font=subtitle_font,
         color=color,
         image_width=image_width,
-        spacing=160,
-        start_height=340,
-        line_spacing=20
+        spacing=280,
+        start_height=start_height + 140,
+        line_spacing=12
     )
     
     # 绘制小文字，自动换行
@@ -99,12 +112,10 @@ def generate_card_info(
         font=small_text_font, 
         color=color, 
         image_width=image_width, 
-        spacing=240, 
-        start_height=420, 
+        spacing=320, 
+        start_height=start_height_2 + 40, 
         line_spacing=12
     )
     
     # 保存图片
     image.save(output_path)
-
-    

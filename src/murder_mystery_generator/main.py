@@ -8,7 +8,8 @@ import os
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
-characters_path = Path(__file__).parent / "characters"
+# characters_path = Path(__file__).parent / "characters"
+characters_path = "src/murder_mystery_generator/characters"
 output_path = 'outputs/murder_case_outline.md'
 
 character_md_path = "outputs/characters.md"

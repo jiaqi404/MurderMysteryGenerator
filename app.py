@@ -5,6 +5,7 @@ import os
 from pathlib import Path
 from src.murder_mystery_generator.utils.yaml_utils import download_yaml, get_yaml_name
 from src.murder_mystery_generator.main import run_crewai, generate_character_card_info
+from src.murder_mystery_generator.utils.websocket_util import write_characters_json
 
 character_choices = ["Jeff", "Hiroharu Nakasuna", "Maya", "Elvin"]
 card_frame_img_path = "ComfyUI Workflow/Card Design"
@@ -68,12 +69,12 @@ with gr.Blocks() as demo:
                         with gr.Row():
                             with gr.Column():
                                 gr.Markdown("### Story Settings")
-                                topic = gr.Textbox(label="Topic", value="Cyberpunk", interactive=True)
-                                year = gr.Number(label="Year", value=2077, interactive=True)
+                                topic = gr.Textbox(label="Topic", value="Magic World", interactive=True)
+                                year = gr.Number(label="Year", value=1999, interactive=True)
                     with gr.Column():
                         gr.Markdown("### Character Generation Settings")
                         with gr.Accordion('Card Design', open=True):
-                            character_bg = gr.Textbox(label="Background of Character Image", interactive=True, lines=2)
+                            character_bg = gr.Textbox(label="Background of Character Image", interactive=True, lines=2, value='a castle in the sunset')
                             card_frame = gr.Dropdown(
                                 label="Card Frame", 
                                 choices=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], 
@@ -128,9 +129,9 @@ with gr.Blocks() as demo:
                             end_at = gr.Number(
                                 label="End At", value=1, interactive=True
                             )
-                            embeds_scaling = gr.Textbox(
-                                label="Embeds Scaling", value="K+V", interactive=True
-                            )
+                            # embeds_scaling = gr.Textbox(
+                            #     label="Embeds Scaling", value="K+V", interactive=True
+                            # )
                 
                 run_btn = gr.Button("Run", variant="primary")
 
@@ -152,6 +153,16 @@ with gr.Blocks() as demo:
             character_options,
             card_frame_img_path_text,
             font_color
+        ]
+    ).success(
+        write_characters_json,
+        inputs=[
+            character_bg,
+            weight_style,
+            weight_composition,
+            start_at,
+            end_at,
+            character_options
         ]
     )
 

@@ -1,0 +1,653 @@
+{
+  "3": {
+    "inputs": {
+      "preset": "PLUS (high strength)",
+      "model": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "IPAdapterUnifiedLoader",
+    "_meta": {
+      "title": "IPAdapter Unified Loader"
+    }
+  },
+  "4": {
+    "inputs": {
+      "weight_style": 0.8000000000000002,
+      "weight_composition": 0.8000000000000002,
+      "expand_style": true,
+      "combine_embeds": "average",
+      "start_at": 0.10000000000000002,
+      "end_at": 0.4000000000000001,
+      "embeds_scaling": "V only",
+      "model": [
+        "64",
+        0
+      ],
+      "ipadapter": [
+        "3",
+        1
+      ],
+      "image_style": [
+        "25",
+        0
+      ],
+      "image_composition": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "IPAdapterStyleComposition",
+    "_meta": {
+      "title": "IPAdapter Style & Composition SDXL"
+    }
+  },
+  "5": {
+    "inputs": {
+      "interpolation": "LANCZOS",
+      "crop_position": "top",
+      "sharpening": 0.8000000000000002,
+      "image": [
+        "42",
+        0
+      ]
+    },
+    "class_type": "PrepImageForClipVision",
+    "_meta": {
+      "title": "Prep Image For ClipVision"
+    }
+  },
+  "6": {
+    "inputs": {
+      "samples": [
+        "8",
+        0
+      ],
+      "vae": [
+        "10",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "8": {
+    "inputs": {
+      "seed": 253297641331917,
+      "steps": 20,
+      "cfg": 8,
+      "sampler_name": "heun",
+      "scheduler": "normal",
+      "denoise": 0.20000000000000004,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "11",
+        0
+      ],
+      "negative": [
+        "12",
+        0
+      ],
+      "latent_image": [
+        "65",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "10": {
+    "inputs": {
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "11": {
+    "inputs": {
+      "text": "1 man, solo, man in a suit and tie standing with his hands in his pockets",
+      "clip": [
+        "10",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Combine CLIP Text Encode (Positive)"
+    }
+  },
+  "12": {
+    "inputs": {
+      "text": "strange body proportion, red face, unclear eyes, wrong fingers, bad hands, long neck,  multiple characters, text, strange line, tile, nodes on the head, strange claw, poken face, long head",
+      "clip": [
+        "10",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Combine CLIP Text Encode (Negative)"
+    }
+  },
+  "18": {
+    "inputs": {
+      "ckpt_name": "ponyDiffusionV6XL_v6StartWithThisOne.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "19": {
+    "inputs": {
+      "lora_name": "Abstract Painting - Style [LoRA] - Pony V6 XL.safetensors",
+      "strength_model": 0.8000000000000002,
+      "strength_clip": 1.0000000000000002,
+      "model": [
+        "18",
+        0
+      ],
+      "clip": [
+        "18",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "21": {
+    "inputs": {
+      "text": "score_9, score_8_up, score_7_up, score_6_up, score_5_up, score_4_up, abstractionism, brush stroke, traditional media, 1  man, solo, cartoon of a man in a trench coat and glasses standing, with white background",
+      "clip": [
+        "19",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Style CLIP Text Encode (Positive)"
+    }
+  },
+  "22": {
+    "inputs": {
+      "text": "many characters, unclear eyes, wrong fingers, text, many hands, many heads, nacked body, strange body proportions, long neck",
+      "clip": [
+        "19",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Style CLIP Text Encode (Negative)"
+    }
+  },
+  "23": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "24": {
+    "inputs": {
+      "seed": 727027134331883,
+      "steps": 35,
+      "cfg": 9,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [
+        "19",
+        0
+      ],
+      "positive": [
+        "21",
+        0
+      ],
+      "negative": [
+        "22",
+        0
+      ],
+      "latent_image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "25": {
+    "inputs": {
+      "samples": [
+        "24",
+        0
+      ],
+      "vae": [
+        "18",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "35": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "36": {
+    "inputs": {
+      "ckpt_name": "dreamshaper_8.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "37": {
+    "inputs": {
+      "lora_name": "9198g.safetensors",
+      "strength_model": 0.8000000000000002,
+      "strength_clip": 1.0000000000000002,
+      "model": [
+        "36",
+        0
+      ],
+      "clip": [
+        "36",
+        1
+      ]
+    },
+    "class_type": "LoraLoader",
+    "_meta": {
+      "title": "Load LoRA"
+    }
+  },
+  "39": {
+    "inputs": {
+      "text": "wrong fingers,3 hands, body proportions, long neck,unclear eyes,  text, many hands, many heads, nacked body",
+      "clip": [
+        "37",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Customer Text Encode (Negative)"
+    }
+  },
+  "40": {
+    "inputs": {
+      "text": "0309g, a man in a trench coat and glasses standing, with white background",
+      "clip": [
+        "37",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Customer Text Encode (Positive)"
+    }
+  },
+  "41": {
+    "inputs": {
+      "seed": 330349938618332,
+      "steps": 30,
+      "cfg": 7.2,
+      "sampler_name": "heun",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [
+        "37",
+        0
+      ],
+      "positive": [
+        "40",
+        0
+      ],
+      "negative": [
+        "39",
+        0
+      ],
+      "latent_image": [
+        "44",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "42": {
+    "inputs": {
+      "samples": [
+        "41",
+        0
+      ],
+      "vae": [
+        "36",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "43": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "42",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "44": {
+    "inputs": {
+      "width": 768,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "63": {
+    "inputs": {
+      "image": "02.pic.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "64": {
+    "inputs": {
+      "weight": 1.0000000000000002,
+      "weight_type": "linear",
+      "combine_embeds": "concat",
+      "start_at": 0,
+      "end_at": 1,
+      "embeds_scaling": "V only",
+      "model": [
+        "3",
+        0
+      ],
+      "ipadapter": [
+        "3",
+        1
+      ],
+      "image": [
+        "25",
+        0
+      ]
+    },
+    "class_type": "IPAdapterAdvanced",
+    "_meta": {
+      "title": "IPAdapter Advanced"
+    }
+  },
+  "65": {
+    "inputs": {
+      "pixels": [
+        "42",
+        0
+      ],
+      "vae": [
+        "10",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "66": {
+    "inputs": {
+      "torchscript_jit": "default",
+      "image": [
+        "70",
+        0
+      ]
+    },
+    "class_type": "InspyrenetRembg",
+    "_meta": {
+      "title": "Inspyrenet Rembg"
+    }
+  },
+  "67": {
+    "inputs": {
+      "pixels": [
+        "74",
+        1
+      ],
+      "vae": [
+        "68",
+        2
+      ]
+    },
+    "class_type": "VAEEncode",
+    "_meta": {
+      "title": "VAE Encode"
+    }
+  },
+  "68": {
+    "inputs": {
+      "ckpt_name": "epicphotogasm_xPlusPlus.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "69": {
+    "inputs": {
+      "samples": [
+        "71",
+        0
+      ],
+      "vae": [
+        "68",
+        2
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "70": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": 768,
+      "height": 1024,
+      "crop": "disabled",
+      "image": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image"
+    }
+  },
+  "71": {
+    "inputs": {
+      "seed": 978399921628947,
+      "steps": 10,
+      "cfg": 6,
+      "sampler_name": "heun",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": [
+        "74",
+        0
+      ],
+      "positive": [
+        "72",
+        0
+      ],
+      "negative": [
+        "73",
+        0
+      ],
+      "latent_image": [
+        "67",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "72": {
+    "inputs": {
+      "text": "a Background with a castle with sunlight",
+      "clip": [
+        "68",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Background CLIP Text Encode (Positive)"
+    }
+  },
+  "73": {
+    "inputs": {
+      "text": "TEXT, LINE,changed hair color, colorful neck, red face",
+      "clip": [
+        "68",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Background CLIP Text Encode (Negative)"
+    }
+  },
+  "74": {
+    "inputs": {
+      "mode": "Foreground",
+      "lighting": "Left Light",
+      "source": "Use Background Image",
+      "remove_bg": true,
+      "model": [
+        "68",
+        0
+      ],
+      "image": [
+        "70",
+        0
+      ],
+      "vae": [
+        "68",
+        2
+      ]
+    },
+    "class_type": "easy icLightApply",
+    "_meta": {
+      "title": "Easy Apply ICLight"
+    }
+  },
+  "75": {
+    "inputs": {
+      "images": [
+        "66",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "76": {
+    "inputs": {
+      "mode": "screen",
+      "blur_sigma": 0.5000000000000001,
+      "blend_factor": 0.75,
+      "image_output": "Preview",
+      "save_prefix": "ComfyUI",
+      "target": [
+        "69",
+        0
+      ],
+      "source": [
+        "70",
+        0
+      ],
+      "mask": [
+        "66",
+        1
+      ]
+    },
+    "class_type": "easy imageDetailTransfer",
+    "_meta": {
+      "title": "Image Detail Transfer"
+    }
+  },
+  "77": {
+    "inputs": {
+      "images": [
+        "69",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  }
+}

@@ -4,7 +4,7 @@ import random
 
 
 character_json_path = "message.json"
-character_img_path = "outputs/cards"
+character_img_path = "outputs/characters"
 
 with open(character_json_path, "r") as f:
     character_json = json.load(f)
@@ -20,6 +20,7 @@ print("character_num:", character_num)
 
 for i in range(character_num):
     Appearance = Appearance_list[i]
+    Appearance = "1person, solo, medium shot, masterpiece, best quality, intricate details, refined digital painting, " + Appearance
     print("Appearance:", Appearance)
 
     api = ComfyApiWrapper("http://127.0.0.1:8188/")
@@ -32,12 +33,12 @@ for i in range(character_num):
     wf.set_node_param("KSampler", "seed", random_seed) 
 
     #YAML appearence
-    wf.set_node_param("Combine CLIP Text Encode (Positive)", "inputs", Appearance)
-    wf.set_node_param("Customer Text Encode (Positive)", "inputs", Appearance)
-    wf.set_node_param("Style CLIP Text Encode (Positive)", "inputs", "score_9, score_8_up, score_7_up, score_6_up, score_5_up, score_4_up, abstractionism, brush stroke, traditional media,"+ Appearance)
+    wf.set_node_param("Combine CLIP Text Encode (Positive)", "text", Appearance)
+    wf.set_node_param("Customer Text Encode (Positive)", "text", Appearance)
+    wf.set_node_param("Style CLIP Text Encode (Positive)", "text", "score_9, score_8_up, score_7_up, score_6_up, score_5_up, score_4_up, abstractionism, brush stroke, traditional media,"+ Appearance)
 
     #Background image generate
-    wf.set_node_param("Background CLIP Text Encode (Positive)", "inputs", Background)
+    wf.set_node_param("Background CLIP Text Encode (Positive)", "text", Background)
 
     #Style combination
     wf.set_node_param("IPAdapter Style & Composition SDXL", "weight_style", Weight_style)

@@ -4,6 +4,7 @@ from src.murder_mystery_generator.utils.yaml_utils import get_selected_character
 import asyncio
 import json
 from websockets import connect
+import os
 
 characters = {
     'background': '',
@@ -16,7 +17,9 @@ characters = {
 
 characters_json_path = 'outputs/comfy/characters.json'
 characters_root_path = 'src/murder_mystery_generator/characters'
+characters_img_path = 'outputs/cards'
 
+# ------------------ Gradio as a client ------------------
 async def send_json_file():
     with open(characters_json_path, "r", encoding="utf-8") as file:
         json_data = json.load(file)
@@ -24,7 +27,6 @@ async def send_json_file():
     async with connect("ws://100.89.254.17:8188") as websocket:
         await websocket.send(json.dumps(json_data))
         message = await websocket.recv()
-
 
 def write_characters_json(
     background: str,
@@ -54,5 +56,15 @@ def write_characters_json(
 
     asyncio.run(send_json_file())
     print("Characters JSON file sent to server!")
+
+# ------------------ Gradio as a host ------------------
+# def save_websocket_images(message):
+#     for filename, image_data in message.items():
+#         with open(f"{characters_img_path}/{filename}", "wb+") as f:
+#             f.write(image_data)
+
+def show_comfy_images():
+    images = [os.path.join(characters_img_path, file) for file in os.listdir(characters_img_path) if file.endswith('.png')]
+    return tuple(images)
 
 

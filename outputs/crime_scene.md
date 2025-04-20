@@ -1,25 +1,33 @@
 I now can give a great answer
-
-
-## Victim Details - Name: Elwynn Asteria
+## Victim Details - Name: **Eryndor Thorne**
 - Age: 32
-- Occupation: Apprentice Enchantress at the Wysteria Academy of Magic
-- Background: Elwynn was a talented young witch from a family of skilled magic-users. She had been studying at the Wysteria Academy for five years, specializing in elemental magic and spellcraft.
+- Occupation: Lead Wizard in the Department of Arcane Research
+- Background: Eryndor was a renowned wizard in his field, specializing in elemental magic. He was known for his groundbreaking research on magical energies and had published several papers on the subject. He was also an accomplished instructor at the prestigious Wysteria Academy of Magic.
 
-## Time of Death - Estimated: 10:45 PM, 23rd February 1999
-
+## Time of Death
+The estimated time of death is between 11 PM and 12 AM on the night of March 15, 1999.
 
 ## Location
-The crime scene is located within the restricted area of the Wysteria Academy's Great Hall. The room is a large, high-ceilinged chamber with long tables and benches arranged in a semi-circle around a central dais. The walls are adorned with intricate carvings of magical creatures and symbols.
+The crime scene is located in a secluded area within the Wysteria Academy's castle walls, specifically in a laboratory deep beneath the earth. The room is situated near the academy's central hub, accessible through a secret passageway only known to authorized personnel.
 
 ## Body Condition
-Elwynn's body was found lying on the floor, approximately 20 feet away from the central dais. She was positioned in a unnatural pose, with her arms and legs splayed out to the sides. Her eyes were open, and her pupils had constricted into tiny pinpoints, giving her an eerily lifelike appearance. A thin layer of frost coated her skin, despite the warmth of the Great Hall.
+Upon examination, the victim's body was found in a state of rigor mortis, indicating that death had occurred several hours prior to discovery. Eryndor's eyes were open, gazing upwards towards the laboratory ceiling, and his skin had a pale, almost translucent quality. A faint scent of ozone hung around him, suggesting some residual magical energy.
 
-## Evidence Found - Initial Observations:
-- A broken crystal orb lies shattered on the floor near Elwynn's head.
-- A torn piece of black silk fabric is caught in a nearby candelabra.
-- A faint smudge of silver dust is visible on the edge of the dais, possibly from a spell or potion.
-- Elwynn's body shows signs of having been subjected to a magical binding spell, with subtle scars and burns on her wrists and ankles.
+## Evidence Found
+The following evidence was discovered at the scene:
+
+* A shattered crystal vial containing a glowing purple liquid on the workbench nearby.
+* A torn piece of fabric caught in the door handle of the laboratory.
+* A set of footprints leading from the laboratory to a nearby ventilation shaft, which appear to match an unknown set of boots.
+* A small notebook with cryptic notes and sketches, belonging to Eryndor, lying open on the floor.
 
 ## Surroundings
-The Great Hall was in disarray, with chairs overturned and tables knocked over. The air was thick with the scent of burned incense and ozone. A faint hum of magic lingered, like the whispers of forgotten spells. The candles that lined the walls cast flickering shadows on the walls, making it seem as though the very spirits of the dead were watching from the darkness.
+The laboratory was in disarray, with various equipment and materials scattered about. There were signs of a hasty departure, including overturned beakers, spilled potions, and a broken staff leaning against the wall. The air was thick with an otherworldly energy, which seemed to be dissipating rapidly. Flickering candles cast eerie shadows on the walls, making it seem as though the room itself was trying to conceal some hidden truth.
+
+Additional details that caught my attention:
+
+* A faint magical residue was detected on the walls and equipment, suggesting that Eryndor had been conducting experiments involving powerful magic.
+* The ventilation shaft leading from the laboratory appears to be tampered with, possibly to facilitate a quick escape or to prevent discovery of any evidence.
+* There were no signs of forced entry or struggle, indicating that the killer may have been someone with access to the laboratory and its secrets.
+
+This crime scene is reeking of magic, deception, and murder. I will need to dig deeper to uncover the truth behind Eryndor's untimely demise.

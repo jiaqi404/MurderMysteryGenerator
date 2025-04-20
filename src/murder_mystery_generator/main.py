@@ -8,7 +8,6 @@ import os
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
-# characters_path = Path(__file__).parent / "characters"
 characters_path = "src/murder_mystery_generator/characters"
 output_path = 'outputs/murder_case_outline.md'
 
@@ -18,6 +17,7 @@ title_font = "fonts/KolkerBrush-Regular.ttf"
 subtitle_font = "fonts/HinaMincho-Regular.ttf"
 text_font = "fonts/HinaMincho-Regular.ttf"
 
+# ------------------ Function to generate info cards ------------------ 
 def generate_character_card_info(
         character_names,
         card_frame_path,
@@ -40,7 +40,7 @@ def generate_character_card_info(
             color=font_color_rgb
         )
 
-# ------------------ Main function ------------------ 
+# ------------------ Function to run crewai ------------------ 
 def run_crewai(character_names, topic, year):
     character_files = get_selected_characters_path(character_names, characters_path)
     characters = format_characters(character_files)

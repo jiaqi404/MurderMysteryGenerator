@@ -135,7 +135,7 @@ with gr.Blocks() as demo:
                         with gr.Accordion('Style Combination', open=False):
                             weight_style = gr.Slider(
                                 label="Weight Style",
-                                minimum=1,
+                                minimum=0.5,
                                 maximum=2,
                                 value=1.5,
                                 step=0.05,

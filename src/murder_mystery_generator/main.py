@@ -23,8 +23,8 @@ def generate_character_card_info(
         card_frame_path,
         font_color
     ):
-    for character_name in character_names:
-        img_path = os.path.join(card_output_path, f"{character_name}_1.png")
+    for i, character_name in enumerate(character_names):
+        img_path = os.path.join(card_output_path, f"{i}_2.png")
         font_color_rgb = transfer_to_rgb(font_color)
 
         print("Generating card of "+character_name+"...")

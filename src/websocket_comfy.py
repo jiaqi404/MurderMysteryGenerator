@@ -1,8 +1,12 @@
 import asyncio
 from websockets.server import serve
+from websockets import connect
 import json
 from comfy_api_simplified import ComfyApiWrapper, ComfyWorkflowWrapper
 import random
+import nest_asyncio
+import os
+import base64
 
 character_json_path = "./outputs/comfy/characters.json"
 comfyui_workflow = "./ComfyUI Workflow/main_workflow.json"
@@ -46,9 +50,27 @@ def start_comfy(character_json, api: ComfyApiWrapper, comfyui_workflow):
         # Generate images and wait for results
         result = api.queue_and_wait_images(wf, output_node_title="Image Detail Transfer")
         for filename, image_data in result.items():
-            filepath = f"{character_img_path}/{filename}.png"
+            filepath = f"{character_img_path}/{i}.png"
             with open(filepath, "wb+") as f:
                 f.write(image_data)
+
+async def send_images():
+    # Load the image files
+    images_json = {'img':[]}  # List to store all image data
+
+    for image_name in os.listdir(character_img_path):
+        image_path = os.path.join(character_img_path, image_name)
+        
+        with open(image_path, "rb") as file:
+            image_data = file.read()
+            images_json['img'].append(base64.encodebytes(image_data).decode('utf-8'))
+
+    # 使用ws://或正确配置wss
+    async with connect("ws://100.119.199.109:8188") as websocket:
+        # Send the JSON data as a string
+        await websocket.send(json.dumps(images_json))
+        message = await websocket.recv()
+        print(f"Received: {message}")
 
 async def handler(websocket):
     # await websocket.send("Connected!")
@@ -67,9 +89,12 @@ async def handler(websocket):
             # Start the ComfyUI workflow with the character JSON
             start_comfy(character_json, api, comfyui_workflow)
 
+            send_images()
+
 async def main():
     async with serve(handler, "0.0.0.0", 8188):  # 监听所有接口
         await asyncio.Future()
 
 if __name__ == "__main__":
+    nest_asyncio.apply()
     asyncio.run(main())

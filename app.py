@@ -51,11 +51,11 @@ async def handler(websocket):
     async for message in websocket:
         message_json = json.loads(message)
         img_json = message_json.get("img")
-        print(len(img_json))
+        print("Received images!")
         for img in img_json:
             json_to_png(img, f"{output_file}/{count}.png")
             count += 1
-            print(count)
+            print(f"Processed {count} images. Latest image saved at: {output_file}/{count - 1}.png")
 
 async def main():
     print("Host open!")

@@ -5,10 +5,19 @@ import os
 from pathlib import Path
 from src.murder_mystery_generator.utils.yaml_utils import download_yaml, get_yaml_name
 from src.murder_mystery_generator.main import run_crewai, generate_character_card_info
-from src.murder_mystery_generator.utils.websocket_util import write_characters_json, show_comfy_images
+from src.murder_mystery_generator.utils.websocket_utils import write_characters_json, show_comfy_images, json_to_png
+from src.murder_mystery_generator.utils.card_utils import remove_files_in_directory
+import asyncio
+from websockets.server import serve
+import json
+import threading
+import time
+from queue import Queue
 
 character_choices = ["Jeff", "Hiroharu Nakasuna", "Maya", "Elvin"]
 card_frame_img_path = "ComfyUI Workflow/Card Design"
+output_file = "outputs/cards"
+count = 0
 
 def update_selected_characters(selected):
     return ", ".join(selected)
@@ -35,6 +44,23 @@ def update_card_frame_path(selected_frame):
         return selected_card_frame_path
     else:
         return None
+
+async def handler(websocket):
+    global count
+    await websocket.send("Connected!")
+    async for message in websocket:
+        message_json = json.loads(message)
+        img_json = message_json.get("img")
+        print(len(img_json))
+        for img in img_json:
+            json_to_png(img, f"{output_file}/{count}.png")
+            count += 1
+            print(count)
+
+async def main():
+    print("Host open!")
+    async with serve(handler, "0.0.0.0", 8188, max_size=10 * 1024 * 1024): # max message size 10MB
+        await asyncio.Future()
 
 # ------------------ Gradio interface ------------------
 with gr.Blocks() as demo:
@@ -135,6 +161,7 @@ with gr.Blocks() as demo:
             with gr.Column():
                 gallery = gr.Gallery(label="Generated Cards", show_label=True, elem_id="gallery", columns=[4], object_fit="contain", height="auto", type="filepath")
                 output_script = gr.Textbox(label="Output Script", interactive=False, lines=10)
+                get_message_btn = gr.Button("Get Message")
     
     with gr.Tab("Game"):
         text_input = gr.Textbox(label="Enter your text", placeholder="Type something...")
@@ -142,6 +169,8 @@ with gr.Blocks() as demo:
 
     # ------------------ Main functions ------------------
     run_btn.click(
+        remove_files_in_directory
+    ).success(
         run_crewai, 
         inputs=[character_options, topic, year], 
         outputs=output_script
@@ -162,9 +191,27 @@ with gr.Blocks() as demo:
             end_at,
             character_options
         ]
-    ).success(
+    )
+
+    get_message_btn.click(
         show_comfy_images,
         outputs=gallery
     )
 
-demo.launch()
+def run_gradio():
+    demo.launch()
+
+def run_async():
+    asyncio.run(main())
+
+if __name__ == "__main__":
+    t1 = threading.Thread(target=run_gradio)
+    t1.daemon = True
+    t2 = threading.Thread(target=run_async)
+    t2.daemon = True
+    
+    t1.start()
+    t2.start()
+
+    while True:
+        time.sleep(1)

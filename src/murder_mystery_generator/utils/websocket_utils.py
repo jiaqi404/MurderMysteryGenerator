@@ -5,6 +5,7 @@ import asyncio
 import json
 from websockets import connect
 import os
+from base64 import b64decode
 
 characters = {
     'background': '',
@@ -58,12 +59,12 @@ def write_characters_json(
     print("Characters JSON file sent to server!")
 
 # ------------------ Gradio as a host ------------------
-# def save_websocket_images(message):
-#     for filename, image_data in message.items():
-#         with open(f"{characters_img_path}/{filename}", "wb+") as f:
-#             f.write(image_data)
+def json_to_png(json_data, output_file):
+    img_bytes = b64decode(json_data)
+    with open(output_file, "wb") as f:
+        f.write(img_bytes)
 
-def show_comfy_images():
+def show_comfy_images(characters_img_path=characters_img_path):
     images = [os.path.join(characters_img_path, file) for file in os.listdir(characters_img_path) if file.endswith('.png')]
     return tuple(images)
 

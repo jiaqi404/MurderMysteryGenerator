@@ -1,10 +1,28 @@
 from PIL import Image, ImageDraw, ImageFont
 import yaml
+import os
+
+output_file = "outputs/cards"
+
+def remove_files_in_directory(directory_path=output_file):
+    try:
+        for filename in os.listdir(directory_path):
+            file_path = os.path.join(directory_path, filename)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 # hex to rgb
 def transfer_to_rgb(h):
-    h = h.lstrip('#')
-    return tuple(int(h[i:i+2], 16) for i in (0, 2, 4))
+    if h.startswith('#'):
+        h = h.lstrip('#')
+        return tuple(int(h[i:i+2], 16) for i in (0, 2, 4))
+    elif h.startswith('rgba'):
+        h = h.lstrip('rgba(').rstrip(')')
+        h = h.split(',')
+        h = [int(float(i)) for i in h]
+        return tuple(h[:3])
 
 # get content from character markdown
 def get_content(character_md, character_name, content_name):

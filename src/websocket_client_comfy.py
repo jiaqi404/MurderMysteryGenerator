@@ -14,11 +14,6 @@ async def send_images():
         
         with open(image_path, "rb") as file:
             image_data = file.read()
-            # Encode image data in base64 and store it in the list
-            # images_data.append({
-            #     "filename": image_name,
-            #     "img": base64.encodebytes(image_data).decode('utf-8')
-            # })
             images_json['img'].append(base64.encodebytes(image_data).decode('utf-8'))
 
     # 使用ws://或正确配置wss

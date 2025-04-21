@@ -89,7 +89,7 @@ async def handler(websocket):
             # Start the ComfyUI workflow with the character JSON
             start_comfy(character_json, api, comfyui_workflow)
 
-            send_images()
+            await send_images()
 
 async def main():
     async with serve(handler, "0.0.0.0", 8188):  # 监听所有接口

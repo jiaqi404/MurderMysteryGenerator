@@ -1,54 +1,98 @@
-# MurderMysteryGenerator Crew
+# MurderMysteryGenerator
 
-Welcome to the MurderMysteryGenerator Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+MurderMysteryGenerator is a powerful tool that leverages [crewAI](https://crewai.com) and [comfyUI](https://www.comfy.org/) to create engaging stories and characters for a Murder Mystery Game.
 
-## Installation
+## Getting Started
 
-Ensure you have Python >=3.10 <3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+To run MurderMysteryGenerator, you will need two computers: one for running crewAI and Gradio, and another for running comfyUI. These systems communicate with each other via websockets. Follow the steps below to set up and connect the components.
 
-First, if you haven't already, install uv:
+---
 
+### Installation Instructions
+
+#### For the Computer Running crewAI and Gradio:
+
+1. Create and activate a Python environment:
+    ```bash
+    conda create -n myenv python<3.13
+    conda activate myenv
+    ```
+
+2. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Install crewAI:
+    ```bash
+    crewai install
+    ```
+
+#### For the Computer Running comfyUI:
+
+1. Use the provided workflow file `ComfyUI Workflow/main_workflow.json` for generation.
+
+2. Download and install the following models:
+    - [Stable Diffusion XL Base 1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/blob/main/sd_xl_base_1.0.safetensors)
+    - [Pony Diffusion V6 XL](https://civitai.com/models/257749/pony-diffusion-v6-xl)
+    - [Not Artists Styles for Pony Diffusion V6 XL](https://civitai.com/models/264290/styles-for-pony-diffusion-v6-xl-not-artists-styles)
+    - [DreamShaper](https://civitai.com/models/4384/dreamshaper)
+    - [epiCPhotoGasm](https://civitai.com/models/132632?modelVersionId=177124)
+
+3. Install the following nodes via the Node Manager:
+    - ComfyUI_IPAdapter_plus
+    - ComfyUI-Inspyrenet-Rembg
+    - ComfyUI Easy Use
+
+4. Install five external models by searching "plus" in the Model Manager with the following criteria:
+    - Type: IP-Adapter
+    - Base: SDXL
+
+    Models to install:
+    - `ip-adapter-faceid-plusv2_sdxl.bin`
+    - `ip-adapter_sdxl.safetensors`
+    - `ip-adapter-plus_sdxl_vit-h.safetensors`
+    - `ip-adapter-plus-face_sdxl_vit-h.safetensors`
+    - `ip_plus_composition_sdxl.safetensors`
+
+---
+
+### Websocket Connection
+
+To enable communication between the two computers, you can use any method of your choice. We recommend using the VPN service [tailscale](https://tailscale.com/). Tailscale creates a private network between the devices, allowing them to communicate via private IP addresses.
+
+1. Set up the VPN and connect both computers.
+2. Update the `host_ip` in the following files to match the private IP address of the comfyUI computer:
+    - `src/websocket_comfy.py`
+    - `src/murder_mystery_generator/utils/websocket_utils.py`
+
+---
+
+### Running the Application
+
+#### On the Computer Running crewAI and Gradio:
+Start the application by running:
 ```bash
-pip install uv
+python app.py
 ```
 
-Next, navigate to your project directory and install the dependencies:
-
-(Optional) Lock the dependencies and install them by using the CLI command:
+#### On the Computer Running comfyUI:
+Navigate to the `src` directory and start the websocket server:
 ```bash
-crewai install
-```
-### Customizing
-
-**Add your `OPENAI_API_KEY` into the `.env` file**
-
-- Modify `src/murder_mystery_generator/config/agents.yaml` to define your agents
-- Modify `src/murder_mystery_generator/config/tasks.yaml` to define your tasks
-- Modify `src/murder_mystery_generator/crew.py` to add your own logic, tools and specific args
-- Modify `src/murder_mystery_generator/main.py` to add custom inputs for your agents and tasks
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
-
-```bash
-$ crewai run
+cd src
+python websocket_comfy.py
 ```
 
-This command initializes the murder_mystery_generator Crew, assembling the agents and assigning them tasks as defined in your configuration.
+---
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+### Using the Application
 
-## Understanding Your Crew
+Once both systems are running, you can use the Gradio interface to interact with MurderMysteryGenerator! Follow these steps:
 
-The murder_mystery_generator Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+1. Use the Gradio interface to input your murder mystery game details.
+2. Press the "Run" button to send a request to comfyUI for image generation.
+3. Once the generation is complete, press the "Get Message" button to retrieve and display the generated images.
 
-## Support
+Enjoy creating your own murder mystery game with the help of AI!
 
-For support, questions, or feedback regarding the MurderMysteryGenerator Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
-
-Let's create wonders together with the power and simplicity of crewAI.
+---

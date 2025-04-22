@@ -71,101 +71,96 @@ with gr.Blocks() as demo:
                 
         It is a tool for writers, game developers, and anyone who wants to create engaging narratives.
         """)
-    with gr.Tab("Tool"):
-        with gr.Row():
-            with gr.Column(variant="panel"):
-                with gr.Row():
-                    with gr.Column():
-                        with gr.Row():
-                            with gr.Column():
-                                gr.Markdown("### Characters")
-                                upload_yaml = gr.File(
-                                    label="Upload YAML File", file_types=[".yaml"]
-                                )
-                                character_options = gr.CheckboxGroup(
-                                    choices=character_choices,
-                                    label="Select Characters",
-                                    interactive=True
-                                )
-                                upload_yaml.change(
-                                    add_yaml_characters,
-                                    inputs=[upload_yaml, character_options],
-                                    outputs=character_options
-                                )
-                        with gr.Row():
-                            with gr.Column():
-                                gr.Markdown("### Story Settings")
-                                topic = gr.Textbox(label="Topic", value="Magic World", interactive=True)
-                                year = gr.Number(label="Year", value=1999, interactive=True)
-                    with gr.Column():
-                        gr.Markdown("### Character Generation Settings")
-                        with gr.Accordion('Card Design', open=True):
-                            character_bg = gr.Textbox(label="Background of Character Image", interactive=True, lines=2, value='a castle in the sunset')
-                            card_frame = gr.Dropdown(
-                                label="Card Frame", 
-                                choices=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], 
-                                value=None, 
+    with gr.Row():
+        with gr.Column(variant="panel"):
+            with gr.Row():
+                with gr.Column():
+                    with gr.Row():
+                        with gr.Column():
+                            gr.Markdown("### Characters")
+                            upload_yaml = gr.File(
+                                label="Upload YAML File", file_types=[".yaml"]
+                            )
+                            character_options = gr.CheckboxGroup(
+                                choices=character_choices,
+                                label="Select Characters",
                                 interactive=True
                             )
-                            font_color = gr.ColorPicker(
-                                label="Font Color", 
-                                value="#FFFFFF", 
-                                interactive=True
+                            upload_yaml.change(
+                                add_yaml_characters,
+                                inputs=[upload_yaml, character_options],
+                                outputs=character_options
                             )
-                            card_frame_img = gr.Image(
-                                label="Card Frame", 
-                                type="pil", 
-                                interactive=False
-                            )
-                            card_frame_img_path_text = gr.Textbox(
-                                label="Card Frame Image Path", 
-                                interactive=False,
-                                visible=False
-                            )
-                            card_frame.change(
-                                update_card_frame_image, 
-                                inputs=[card_frame], 
-                                outputs=card_frame_img
-                            )
-                            card_frame.change(
-                                update_card_frame_path,
-                                inputs=[card_frame],
-                                outputs=card_frame_img_path_text
-                            )
-                        with gr.Accordion('Style Combination', open=False):
-                            weight_style = gr.Slider(
-                                label="Weight Style",
-                                minimum=0.5,
-                                maximum=2,
-                                value=1.5,
-                                step=0.05,
-                                interactive=True
-                            )
-                            weight_composition = gr.Slider(
-                                label="Weight Compostion",
-                                minimum=0.5,
-                                maximum=1,
-                                value=0.75,
-                                step=0.05,
-                                interactive=True
-                            )
-                            start_at = gr.Number(
-                                label="Start At", value=0, interactive=True
-                            )
-                            end_at = gr.Number(
-                                label="End At", value=1, interactive=True
-                            )
-                
-                run_btn = gr.Button("Run", variant="primary")
+                    with gr.Row():
+                        with gr.Column():
+                            gr.Markdown("### Story Settings")
+                            topic = gr.Textbox(label="Topic", value="Magic World", interactive=True)
+                            year = gr.Number(label="Year", value=1999, interactive=True)
+                with gr.Column():
+                    gr.Markdown("### Character Generation Settings")
+                    with gr.Accordion('Card Design', open=True):
+                        character_bg = gr.Textbox(label="Background of Character Image", interactive=True, lines=2, value='a castle in the sunset')
+                        card_frame = gr.Dropdown(
+                            label="Card Frame", 
+                            choices=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], 
+                            value=None, 
+                            interactive=True
+                        )
+                        font_color = gr.ColorPicker(
+                            label="Font Color", 
+                            value="#FFFFFF", 
+                            interactive=True
+                        )
+                        card_frame_img = gr.Image(
+                            label="Card Frame", 
+                            type="pil", 
+                            interactive=False
+                        )
+                        card_frame_img_path_text = gr.Textbox(
+                            label="Card Frame Image Path", 
+                            interactive=False,
+                            visible=False
+                        )
+                        card_frame.change(
+                            update_card_frame_image, 
+                            inputs=[card_frame], 
+                            outputs=card_frame_img
+                        )
+                        card_frame.change(
+                            update_card_frame_path,
+                            inputs=[card_frame],
+                            outputs=card_frame_img_path_text
+                        )
+                    with gr.Accordion('Style Combination', open=False):
+                        weight_style = gr.Slider(
+                            label="Weight Style",
+                            minimum=0.5,
+                            maximum=2,
+                            value=1.5,
+                            step=0.05,
+                            interactive=True
+                        )
+                        weight_composition = gr.Slider(
+                            label="Weight Compostion",
+                            minimum=0.5,
+                            maximum=1,
+                            value=0.75,
+                            step=0.05,
+                            interactive=True
+                        )
+                        start_at = gr.Number(
+                            label="Start At", value=0, interactive=True
+                        )
+                        end_at = gr.Number(
+                            label="End At", value=1, interactive=True
+                        )
+            
+            run_btn = gr.Button("Run", variant="primary")
 
-            with gr.Column():
-                gallery = gr.Gallery(label="Generated Cards", show_label=True, elem_id="gallery", columns=[4], object_fit="contain", height="auto", type="filepath")
-                output_script = gr.Textbox(label="Output Script", interactive=False, lines=10)
-                get_message_btn = gr.Button("Get Message")
-    
-    with gr.Tab("Game"):
-        text_input = gr.Textbox(label="Enter your text", placeholder="Type something...")
-        image_output = gr.Image(label="Generated Image")
+        with gr.Column():
+            gallery = gr.Gallery(label="Generated Cards", show_label=True, elem_id="gallery", columns=[4], object_fit="contain", height="auto", type="filepath")
+            output_script = gr.Textbox(label="Output Script", interactive=False, lines=10)
+            get_message_btn = gr.Button("Get Message")
 
     # ------------------ Main functions ------------------
     run_btn.click(

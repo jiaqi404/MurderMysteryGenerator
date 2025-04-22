@@ -11,7 +11,9 @@ import base64
 character_json_path = "./outputs/comfy/characters.json"
 comfyui_workflow = "./ComfyUI Workflow/main_workflow.json"
 character_img_path = "./outputs/characters"
+host_ip = "ws://100.119.199.109:8188"
 
+# Set generation settings and start comfyui to generate images
 def start_comfy(character_json, api: ComfyApiWrapper, comfyui_workflow):
     Background = character_json["background"]
     Weight_style = character_json["weight_style"]
@@ -54,6 +56,7 @@ def start_comfy(character_json, api: ComfyApiWrapper, comfyui_workflow):
             with open(filepath, "wb+") as f:
                 f.write(image_data)
 
+# Save the images to a JSON file and send them to the server
 async def send_images():
     # Load the image files
     images_json = {'img':[]}  # List to store all image data
@@ -65,16 +68,16 @@ async def send_images():
             image_data = file.read()
             images_json['img'].append(base64.encodebytes(image_data).decode('utf-8'))
 
-    # 使用ws://或正确配置wss
-    async with connect("ws://100.119.199.109:8188") as websocket:
+    async with connect(host_ip) as websocket:
         # Send the JSON data as a string
         await websocket.send(json.dumps(images_json))
         message = await websocket.recv()
         print(f"Received: {message}")
 
+# WebSocket server handler
 async def handler(websocket):
-    # await websocket.send("Connected!")
     api = ComfyApiWrapper("http://127.0.0.1:8188/")
+
     async for message in websocket:
         print(f"Received: {message}")
         if message != None:
@@ -89,6 +92,7 @@ async def handler(websocket):
             # Start the ComfyUI workflow with the character JSON
             start_comfy(character_json, api, comfyui_workflow)
 
+            # Wait for the images to be generated and send them
             await send_images()
 
 async def main():

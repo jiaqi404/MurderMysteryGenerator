@@ -19,13 +19,14 @@ characters = {
 characters_json_path = 'outputs/comfy/characters.json'
 characters_root_path = 'src/murder_mystery_generator/characters'
 characters_img_path = 'outputs/cards'
+host_ip = "ws://100.89.254.17:8188"
 
 # ------------------ Gradio as a client ------------------
 async def send_json_file():
     with open(characters_json_path, "r", encoding="utf-8") as file:
         json_data = json.load(file)
 
-    async with connect("ws://100.89.254.17:8188") as websocket:
+    async with connect(host_ip) as websocket:
         await websocket.send(json.dumps(json_data))
         message = await websocket.recv()
 

@@ -28,6 +28,8 @@ MurderMysteryGenerator is a powerful tool that leverages [crewAI](https://crewai
     crewai install
     ```
 
+4. Create a `.env` file in the root folder and set environment variables in order to use LLM in crewAI.
+
 #### For the Computer Running comfyUI:
 
 1. Use the provided workflow file `ComfyUI Workflow/main_workflow.json` for generation.

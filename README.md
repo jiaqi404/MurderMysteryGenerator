@@ -4,7 +4,7 @@ MurderMysteryGenerator is a powerful tool that leverages [crewAI](https://crewai
 
 ## Getting Started
 
-To run MurderMysteryGenerator, you will need two computers: one for running crewAI and Gradio, and another for running comfyUI. These systems communicate with each other via websockets. Follow the steps below to set up and connect the components.
+**To run MurderMysteryGenerator, you will need two computers: one for running crewAI and Gradio, and another for running comfyUI.** These systems communicate with each other via websockets. Follow the steps below to set up and connect the components.
 
 ---
 
@@ -95,4 +95,10 @@ Once both systems are running, you can use the Gradio interface to interact with
 
 Enjoy creating your own murder mystery game with the help of AI!
 
----
+## Acknowledgments
+
+We thank the authors of the following projects for their excellent contributions!
+
+- [crewAI](https://github.com/crewAIInc/crewAI)
+- [comfyUI](https://github.com/comfyanonymous/ComfyUI)
+- [gradio](https://github.com/gradio-app/gradio)

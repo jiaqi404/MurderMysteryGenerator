@@ -67,9 +67,10 @@ with gr.Blocks() as demo:
     gr.Markdown("""
         # MurderMysteryGenerator
 
-        **MurderMysteryGenerator** uses AI to generate murder mystery stories and characters. 
+        **MurderMysteryGenerator** leverages [crewAI](https://crewai.com) and [comfyUI](https://www.comfy.org/) to create engaging stories and characters for a Murder Mystery Game.
                 
-        It is a tool for writers, game developers, and anyone who wants to create engaging narratives.
+        **To run MurderMysteryGenerator, you will need two computers: one for running crewAI and Gradio, and another for running comfyUI.** These systems communicate with each other via websockets. Make Sure two computers are running before you press "Run".
+
         """)
     with gr.Row():
         with gr.Column(variant="panel"):

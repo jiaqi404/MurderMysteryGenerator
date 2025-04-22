@@ -64,7 +64,7 @@ MurderMysteryGenerator is a powerful tool that leverages [crewAI](https://crewai
 To enable communication between the two computers, you can use any method of your choice. We recommend using the VPN service [tailscale](https://tailscale.com/). Tailscale creates a private network between the devices, allowing them to communicate via private IP addresses.
 
 1. Set up the VPN and connect both computers.
-2. Update the `host_ip` in the following files to match the private IP address of the comfyUI computer:
+2. Update the `host_ip` in the following files:
     - `src/websocket_comfy.py`
     - `src/murder_mystery_generator/utils/websocket_utils.py`
 

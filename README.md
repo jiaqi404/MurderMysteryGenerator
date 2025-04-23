@@ -2,6 +2,12 @@
 
 MurderMysteryGenerator is a powerful tool that leverages [crewAI](https://crewai.com) and [comfyUI](https://www.comfy.org/) to create engaging stories and characters for a Murder Mystery Game.
 
+![Alt text](assets/display.png)
+
+## How it Works
+
+![Alt text](assets/workflow.jpg)
+
 ## Getting Started
 
 **To run MurderMysteryGenerator, you will need two computers: one for running crewAI and Gradio, and another for running comfyUI.** These systems communicate with each other via websockets. Follow the steps below to set up and connect the components.
@@ -84,6 +90,8 @@ Navigate to the `src` directory and start the websocket server:
 cd src
 python websocket_comfy.py
 ```
+
+Start comfyUI and open `ComfyUI Workflow/main_workflow.json` in it.
 
 ---
 

@@ -105,6 +105,10 @@ Once both systems are running, you can use the Gradio interface to interact with
 
 Enjoy creating your own murder mystery game with the help of AI!
 
+### Demo Video
+
+link: https://www.youtube.com/watch?v=IH_5Y5KH05Q
+
 ## Acknowledgments
 
 We thank the authors of the following projects for their excellent contributions!
